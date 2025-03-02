@@ -1,7 +1,5 @@
 'use client'
 
-"use client";
-
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -35,40 +33,33 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="fixed top-0 z-10 w-full flex flex-col items-center justify-around space-y-2 ">
-      <div className="w-full flex items-center bg-white justify-around  shadow-b shadow-md  shadow-cyan-500">
-        <div className="p-2 rounded-md w-full">
-          <Link href="/">
-            <Image src="/logo.png" height={100} width={100} alt="Logo" />
-          </Link>
-        </div>
-        <form onSubmit={handleSearch} className="relative w-full max-w-md hidden lg:block">
-          <input 
-            type="text" 
-            placeholder="Buscar..." 
-            value={query} 
-            onChange={(e) => setQuery(e.target.value)} 
-            className="w-full px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-full shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none" 
-          />
-          <button type="submit" className="absolute inset-y-0 right-3 flex items-center text-gray-500 hover:text-blue-600">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-4.35-4.35m2.85-6.15a7.5 7.5 0 11-15 0 7.5 7.5 0 0115 0z" />
-            </svg>
-          </button>
+    <nav className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+      <div className="flex items-center justify-between px-4 py-3 lg:px-8">
+        <Link href="/">
+          <Image src="/logo.png" height={900} width={900} alt="Logo" className="lg:h-[80px] md:h-14 h-6 w-auto"/>
+        </Link>
+        <form onSubmit={handleSearch} className="hidden lg:block w-1/3">
+          <div className="relative">
+            <input 
+              type="text" 
+              placeholder="Buscar..." 
+              value={query} 
+              onChange={(e) => setQuery(e.target.value)} 
+              className="w-full px-4 py-2 border border-gray-300 rounded-full shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none" 
+            />
+            <button type="submit" className="absolute inset-y-0 right-3 flex items-center text-gray-500 hover:text-blue-600">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-4.35-4.35m2.85-6.15a7.5 7.5 0 11-15 0 7.5 7.5 0 0115 0z" />
+              </svg>
+            </button>
+          </div>
         </form>
-      </div>
-      <div className=" w-full flex items-center justify-center">
-      <div className="hidden lg:flex items-center space-x-5 w-full justify-center">
-        {menuItems.map((item) => (
-          <Link key={item.id} href={`/boxProduct?category=${encodeURIComponent(item.categoria)}`} className="text-md font-light text-black transition-transform hover:text-cyan-500 hover:scale-105 hover:uppercase hover:font-bold" aria-label={`Ir a ${item.categoria}`}>{item.categoria}</Link>
-        ))}
-      </div>
-      </div>
-        <div className="lg:hidden flex items-center" onClick={toggleModal}>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 cursor-pointer">
+        <div className="lg:hidden" onClick={toggleModal}>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 cursor-pointer">
             <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
           </svg>
         </div>
+      </div>
         <AnimatePresence>
           {isModalOpen && (
             <motion.div 
@@ -110,6 +101,12 @@ const Navbar = () => {
             </motion.div>
           )}
         </AnimatePresence>
+        <div className="flex flex-wrap mx-auto w-screem px-4 items-center justify-between space-x-4 bg-blue-600 hidden lg:block ">
+          {menuItems.map((item) => (
+            <Link key={item.id} href={`/boxProduct?category=${encodeURIComponent(item.categoria)}`}
+              className="text-md font-light text-white items-center transition-transform hover:text-yellow-300 hover:scale-105 hover:uppercase hover:font-bold hover:bg-blue-600 hover:p-2 hover:rounded-lg"  aria-label={`Ir a ${item.categoria}`} onClick={() => setIsModalOpen(false)}>{item.categoria}</Link>
+          ))}
+        </div>
     </nav>
   );
 };

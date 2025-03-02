@@ -7,11 +7,11 @@ const GalleryTours = ({ cards }) => {
 
   return (
     <div className="w-full px-4">
-      <div className="flex lg:grid lg:grid-cols-3 gap-6 overflow-x-auto py-4 scrollbar-hide">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-4">
         {cards.map((card, index) => (
           <div 
             key={index} 
-            className="min-w-[280px] bg-white shadow-lg rounded-lg overflow-hidden transition-transform hover:scale-105"
+            className="bg-white shadow-lg rounded-lg overflow-hidden transition-transform hover:scale-105"
           >
             <img 
               src={card.image} 

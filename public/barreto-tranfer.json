@@ -1,224 +1,271 @@
 {
-"productos":[
- {
-  "id": 1,
-  "nombre": "Duster 5 pusto",
-  "descripcion": "4,puestos transporte 24 horas, radio bluetooth, baul espacioso, de gran espacio aire acondicionado",
-  "categoria": "transportation"
- },
- {
-  "id": 2,
-  "nombre": "hiunday 10 puesto",
-  "descripcion": "10 puesto + 1 opcional,transporte 24 horas, radio bluetooth, baul espacioso, de gran espacio,sillas reclinables, aire acondicionado",
-  "fotoPerfil": "https:\/\/drive.google.com\/file\/d\/1SPzIg0Sf9zFNx98JW6evUGx_SLkgLRwE\/view?usp=drive_link",
-  "todasFotos": "https:\/\/drive.google.com\/file\/d\/1SPzIg0Sf9zFNx98JW6evUGx_SLkgLRwE\/view?usp=drive_link;https:\/\/drive.google.com\/file\/d\/16ImbE55WL_lIOfhenLWKx96jodxUFUyg\/view?usp=drive_link;https:\/\/drive.google.com\/file\/d\/1mOoeB4fGYz7fv_OvBfqVZvOulq-B4Sg7\/view?usp=drive_link",
-  "categoria": "transportation"
- },
- {
-  "id": 3,
-  "nombre": "Renault Master 16 puestos",
-  "descripcion": "15 puesto + 1 opcional,transporte 24 horas, radio bluetooth, baul espacioso, de gran espacio,sillas reclinables, aire acondicionado",
-  "categoria": "transportation"
- },
- {
-  "id": 4,
-  "nombre": "Citrone Jumper 17 puesto",
-  "descripcion": "16 puesto + 1 opcional,transporte 24 horas, radio bluetooth, baul espacioso, de gran espacio,sillas reclinables, aire acondicionado",
-  "fotoPerfil": "https:\/\/drive.google.com\/file\/d\/1JYWX00j2rX15TZqdtxetbe4ESuv7Lk3I\/view?usp=drive_link",
-  "todasFotos": "https:\/\/drive.google.com\/file\/d\/1JYWX00j2rX15TZqdtxetbe4ESuv7Lk3I\/view?usp=drive_link;https:\/\/drive.google.com\/file\/d\/1jc4VGGuI0OVTLeK6emL0D4NcvLHebQSg\/view?usp=drive_link",
-  "categoria": "transportation"
- },
- {
-  "id": 5,
-  "nombre": "Mercedes Beanz Splinter 19 puestos",
-  "descripcion": "18 puesto + 1 opcional,transporte 24 horas, radio bluetooth, baul espacioso, de gran espacio,sillas reclinables, aire acondicionado, vehiculo luxury",
-  "categoria": "transportation"
- },
- {
-  "id": 6,
-  "nombre": "hiunday County 23 puestos",
-  "descripcion": "22 puesto + 1 opcional,transporte 24 horas, radio bluetooth, baul espacioso, de gran espacio,sillas reclinables, aire acondicionado, vehiculo luxury",
-  "categoria": "transportation"
- },
- {
-  "id": 7,
-  "nombre": "Chevrolet NPR 30 puesto",
-  "descripcion": "30 puestos, transporte 24 horas, radio bluetooth, baul espacioso, de gran espacio,sillas reclinables, aire acondicionado, vehiculo luxury",
-  "categoria": "transportation"
- },
- {
-  "id": 8,
-  "nombre": "Yuton 40 puesto",
-  "descripcion": "40 puestos, transporte 24 horas, radio bluetooth, baul espacioso, de gran espacio,sillas reclinables, aire acondicionado, vehiculo luxury",
-  "categoria": "transportation"
- },
- {
-  "id": 9,
-  "nombre": "Bora Bora",
-  "descripcion": "horario salida 7:30 - retorno 16:00, trasporte lancha ida y vuelta, coctel de bienvenida, Almuerzo: menu a la carta, Cama de playa o asoleadora, Acceso a Area VIP + Area Club, punto de encuentro Muelle de la bodegita puerta #3, solo Mayores 18 años, Nota: NO INCLUYE IMPUESTO",
-  "categoria": "pastimes"
- },
- {
-  "id": 10,
-  "nombre": "Tours 5 Islas",
-  "descripcion": "Salidas Diarias. Recorrido en botes deportivos (botes capacidad de 18 a 30 personas) Impuesto portuario incluido, salida de marinas privadas. Recogida hotelera (Zona norte, Bocagrande, Laguito, Castillo grande) Personal del centro es citado en el Parque Centenario. Parada panorámica en el fuerte de bocachica, explicación histórica. Recorrido panorámico por las islas del rosario. Actividad de snorkel incluida en la Isla de Majayura. ️Avistamiento de la avioneta sumergida de Pablo Escobar Gaviria. Almuerzo en la isla privada Vistamar (Isla grande), tres opciones: pescado frito, pechuga asada, vegetariano; acompañado de arroz con coco, patacones y ensalada. Degustación Cóctel de mariscos, bienvenida en la isla cholón, Full Party. Sillas en Agua azul. Sunset en playa tranquila, uso de las instalaciones del restaurante. Actividad del plancton. Retorno en bus hasta la zona hotelera Bocagrande y Laguito. HORA DE RECOGIDA 7:30 AM a 8 AM RETORNO 8PM. IMPORTANTE * Los pasajeros hospedados en zona norte, son recogidos en la puerta del hotel o un punto acordado, pero de regreso quedan en la torre del reloj. * Indicar a los pasajeros estar puntuales en el lobby del hotel, para evitar inconvenientes a la hora de la recogida.* Antes de consumir cualquier producto o servicio en playa, consultar el valor. *De preferencia usar efectivo para realizar pagos en playa. * Cuidar sus pertenencias dentro y fuera del bus, la agencia no se hace responsable por pérdida de artículos personales.",
-  "categoria": "pastimes"
- },
- {
-  "id": 11,
-  "nombre": "Tours Islas Del Rosario",
-  "descripcion": "trasnporte de lancha rapida, embarcacioes desde 20 a 54 personas, Recorrido panoramico por las islas del rosario, llegada a la islas San Martin de pajarales donde se encuentra el Oceanario el Cual presenta un especctaculo de Delfines y tiburones cuya entrada es adicional, llegada a playa blanca en la isla de baru, almierzo tipico Arroz de coco, patacones, ensaladda pescado frito, reffresco. NOTA NO INCLUYE: impuesto nuelle, show de delfines, snorkleeling, alquiler de sillas playeras o parasoles",
-  "categoria": "pastimes"
- },
- {
-  "id": 12,
-  "nombre": "PAUE BEACH CLUB",
-  "descripcion": "PROHIBIDO EL INGRESO DE BEBIDAS (ALCOHÓLICAS Y NO ALCOHÓLICAS) Y ALIMENTOS. PROHIBIDO EL INGRESO DE ARMAS DE FUEGO Y SUSTANCIAS ALUCINÓGENAS. POLÍTICA DE CANCELACIÓN Y\/O REEMBOLSO.Todas las reservaciones están sujetas a disponibilidad de cupos y no pueden ser garantizadas hasta haber. recibido el pago. En caso de cambio de fecha de la reservación solo se hará bajo disponibilidad y está sujeto a las condiciones de la isla. CONDICIONES DE CANCELACIÓN.Si cancela su reserva hasta 24 horas antes del pasadía podrás reagendar la fecha dentro de un plazo máximo de seis meses. NOTA: Igualmente el cliente podría transferir su reserva a un tercero en caso que lo desee. Si el pasadía NO se aplaza 24 horas antes, o el pasajero no se presenta en el muelle NO SHOW, perderá por completo su abono. Los clientes podrán retractarse hasta 24 horas antes del servicio y se reembolsará el 80% del servicio, el 20% restante corresponden a gastos administrativos, pasado el plazo NO aplicará ningún tipo de reembolso. PAUE BEACH LOUNGE no estará obligado a reembolsar ninguna suma si por causas ajenas, de fuerza mayor o relacionadas con la pandemia, el cliente no se presenta oportunamente el día de su reserva o llega con posterioridad a la hora de embarque.Mujeres embarazadas y\/o con niños de brazo viajan bajo su propia responsabilidad.",
-  "categoria": "pastimes"
- },
- {
-  "id": 13,
-  "nombre": "Luxury Ambiente Beach",
-  "descripcion": "Transporte en lancha tipo Triton. Barra abierta bebida nacional ilimitada: cerveza de dia, piña colada, coco loco, Gin tonic, Daiquiri, Tequila Sunrise, Caipiriña, Caipiroska, Mojito, Cuba Libre, agua, Gaseosa y Limonada. Servicio en la Barra. Parasol & asoleadora playera. Almuerzo tipco con 3 opciones,. Opcional: recorrido panoramico con parada en el oceanario. Ducha en la playa (lllevar su toalla)",
-  "categoria": "pastimes"
- },
- {
-  "id": 14,
-  "nombre": "Luxury Ambiente VIP",
-  "descripcion": "Transporte en lancha tipo Bote Deportivo. Barra abierta bebida nacional ilimitada: cerveza de dia,soda saborizada, piña colada, coco loco, Gin tonic, Daiquiri, Tequila Sunrise, Caipiriña, Caipiroska, Mojito, Cuba Libre, agua, Gaseosa y Limonada. Servicio en la Barra y a la cama. DJ rodos los dias. Cama playera por pareja. Almuerzo tipco con 10 opciones,. Opcional: recorrido panoramico con parada en el oceanario. Ducha en la playa (lllevar su toalla)",
-  "categoria": "pastimes"
- },
- {
-  "id": 15,
-  "nombre": "Palmarito Beach",
-  "descripcion": "DAY TOUR PALMARITO BEACH.Adultos: $210.000 por persona.Niños (4-10 AÑOS) $160.000.Niños menores de 3 años no pagan pero deben asumir los consumos.INCLUYE:..Transporte en lancha ida y regreso con salida desde la playa del nuevo hospital de Bocagrande.Bebida de Bienvenida.Almuerzo Tipo Buffet.Uso de las instalaciones, sillas asoleadoras o Kioskos de Palma (Ubicación es según disponibilidad en orden de llegada).Piscina.Uso de Kayaks y tablas de Paddles.NO INCLUYE: Toallas, ni servicio de SPA.HORARIO DE SALIDA HACIA EL HOTEL Desde las 8 am hasta 12:00PM.RETORNO A CARTAGENA Desde las 2:30 pm a 4:30 pm.ES PROHIBIDO EL INGRESO DE BEBIDAS Y ALIMENTOS EN EL HOTEL",
-  "categoria": "pastimes"
- }
-],
-"categoria":[
- {
-  "id": 1,
-  "categoria": "Tures"
- },
- {
-  "id": 2,
-  "categoria": "Catamaran"
- },
- {
-  "id": 3,
-  "categoria": "Botes Rapidos"
- },
- {
-  "id": 4,
-  "categoria": "Yates"
- },
- {
-  "id": 5,
-  "categoria": "Casas"
- },
- {
-  "id": 6,
-  "categoria": "Transporte"
- },
- {
-  "id": 7,
-  "categoria": "Pasa Dias"
- },
- {
-  "id": 8,
-  "categoria": "Apartamentos"
- },
- {
-  "id": 9,
-  "categoria": "Decoraciones"
- }
-],
-"enjoCyartagena":[
- {
-  "id": 1,
-  "idProduct": 9
- },
- {
-  "id": 2,
-  "idProduct": 10
- },
- {
-  "id": 3,
-  "idProduct": 11
- },
- {
-  "id": 4,
-  "idProduct": 12
- }
-],
-"covers":[
- {
-  "id": 1,
-  "foto": "https:\/\/drive.google.com\/file\/d\/1XA8sL7Gi1G7EOt9zAQy-VI3BjFRRaYuq\/view?usp=drive_link"
- },
- {
-  "id": 2,
-  "foto": "https:\/\/drive.google.com\/file\/d\/1X6XciX30d9QaFOZV78Gw768Qf_GDm3gF\/view?usp=drive_link"
- },
- {
-  "id": 3,
-  "foto": "https:\/\/drive.google.com\/drive\/u\/2\/folders\/164g5BaRK1aMlc4kulFIjHUjBjLjruT6q"
- },
- {
-  "id": 4,
-  "foto": "https:\/\/drive.google.com\/drive\/u\/2\/folders\/164g5BaRK1aMlc4kulFIjHUjBjLjruT6q"
- },
- {
-  "id": 5,
-  "foto": "https:\/\/drive.google.com\/file\/d\/1Vlw2zTizUzfNszJekeIXhzje4WWVsl6z\/view?usp=drive_link"
- },
- {
-  "id": 6,
-  "foto": "https:\/\/drive.google.com\/file\/d\/1GzjndFhK3ZkriutYFKvrY8o0by3dJwWT\/view?usp=drive_link"
- }
-],
-"favoriteTours":[
- {
-  "id": 1,
-  "idProduct": 11
- },
- {
-  "id": 2,
-  "idProduct": 12
- },
- {
-  "id": 3,
-  "idProduct": 9
- },
- {
-  "id": 4,
-  "idProduct": 10
- },
- {
-  "id": 5,
-  "idProduct": 13
- },
- {
-  "id": 6,
-  "idProduct": 14
- }
-],
-"redes":[
- {
-  "url": "https:\/\/www.facebook.com\/share\/1BU7wKjaUE\/?mibextid=wwXIfr",
-  "nombre": "facebook"
- },
- {
-  "url": "https:\/\/www.instagram.com\/barrettotransfer_ctg?igsh=MWVucGI4MmJ3bnhnZg%3D%3D&utm_source=qr",
-  "nombre": "instagram"
- },
- {
-  "url": "https:\/\/w.app\/barretotranfers",
-  "nombre": "whatsapp"
- },
- {
-  "url": "https:\/\/www.tiktok.com\/@barretto.transfer?_t=ZS-8u3NXRdYrpa&_r=1",
-  "nombre": "tiktok"
- }
-]
-}
+    "productos":[
+     {
+      "id": 1,
+      "nombre": "Duster 5 pusto",
+      "descripcion": "4,puestos transporte 24 horas, radio bluetooth, baul espacioso, de gran espacio aire acondicionado",
+      "fotoPerfil": "null",
+      "todasFotos": "null",
+      "categoria": "Transporte"
+     },
+     {
+      "id": 2,
+      "nombre": "hiunday 10 puesto",
+      "descripcion": "10 puesto + 1 opcional,transporte 24 horas, radio bluetooth, baul espacioso, de gran espacio,sillas reclinables, aire acondicionado",
+      "fotoPerfil": "https://drive.google.com/file/d/1SPzIg0Sf9zFNx98JW6evUGx_SLkgLRwE/view?usp=drive_link",
+      "todasFotos": ["https://drive.google.com/file/d/1SPzIg0Sf9zFNx98JW6evUGx_SLkgLRwE/view?usp=drive_link","https://drive.google.com/file/d/16ImbE55WL_lIOfhenLWKx96jodxUFUyg/view?usp=drive_link","https://drive.google.com/file/d/1mOoeB4fGYz7fv_OvBfqVZvOulq-B4Sg7/view?usp=drive_link"],
+      "categoria": "Transporte"
+     },
+     {
+      "id": 3,
+      "nombre": "Renault Master 16 puestos",
+      "descripcion": "15 puesto + 1 opcional,transporte 24 horas, radio bluetooth, baul espacioso, de gran espacio,sillas reclinables, aire acondicionado",
+      "fotoPerfil": "null",
+      "todasFotos": "null",
+      "categoria": "Transporte"
+     },
+     {
+      "id": 4,
+      "nombre": "Citrone Jumper 17 puesto",
+      "descripcion": "16 puesto + 1 opcional,transporte 24 horas, radio bluetooth, baul espacioso, de gran espacio,sillas reclinables, aire acondicionado",
+      "fotoPerfil": "https://drive.google.com/file/d/1JYWX00j2rX15TZqdtxetbe4ESuv7Lk3I/view?usp=drive_link",
+      "todasFotos": ["https://drive.google.com/file/d/1JYWX00j2rX15TZqdtxetbe4ESuv7Lk3I/view?usp=drive_link","https://drive.google.com/file/d/1jc4VGGuI0OVTLeK6emL0D4NcvLHebQSg/view?usp=drive_link"],
+      "categoria": "Transporte"
+     },
+     {
+      "id": 5,
+      "nombre": "Mercedes Beanz Splinter 19 puestos",
+      "descripcion": "18 puesto + 1 opcional,transporte 24 horas, radio bluetooth, baul espacioso, de gran espacio,sillas reclinables, aire acondicionado, vehiculo luxury",
+      "fotoPerfil": "null",
+      "todasFotos": "null",
+      "categoria": "Transporte"
+     },
+     {
+      "id": 6,
+      "nombre": "hiunday County 23 puestos",
+      "descripcion": "22 puesto + 1 opcional,transporte 24 horas, radio bluetooth, baul espacioso, de gran espacio,sillas reclinables, aire acondicionado, vehiculo luxury",
+      "fotoPerfil": "null",
+      "todasFotos": "null",
+      "categoria": "Transporte"
+     },
+     {
+      "id": 7,
+      "nombre": "Chevrolet NPR 30 puesto",
+      "descripcion": "30 puestos, transporte 24 horas, radio bluetooth, baul espacioso, de gran espacio,sillas reclinables, aire acondicionado, vehiculo luxury",
+      "fotoPerfil": "null",
+      "todasFotos": "null",
+      "categoria": "Transporte"
+     },
+     {
+      "id": 8,
+      "nombre": "Yuton 40 puesto",
+      "descripcion": "40 puestos, transporte 24 horas, radio bluetooth, baul espacioso, de gran espacio,sillas reclinables, aire acondicionado, vehiculo luxury",
+      "fotoPerfil": "null",
+      "todasFotos": "null",
+      "categoria": "Transporte"
+     },
+     {
+      "id": 9,
+      "nombre": "Bora Bora",
+      "descripcion": "horario salida 7:30 - retorno 16:00, trasporte lancha ida y vuelta, coctel de bienvenida, Almuerzo: menu a la carta, Cama de playa o asoleadora, Acceso a Area VIP + Area Club, punto de encuentro Muelle de la bodegita puerta #3, solo Mayores 18 años, Nota: NO INCLUYE IMPUESTO",
+      "fotoPerfil": "null",
+      "todasFotos": "null",
+      "categoria": "Pasa Dias"
+     },
+     {
+      "id": 10,
+      "nombre": "Tours 5 Islas",
+      "descripcion": "Salidas Diarias. Recorrido en botes deportivos (botes capacidad de 18 a 30 personas) Impuesto portuario incluido, salida de marinas privadas. Recogida hotelera (Zona norte, Bocagrande, Laguito, Castillo grande) Personal del centro es citado en el Parque Centenario. Parada panorámica en el fuerte de bocachica, explicación histórica. Recorrido panorámico por las islas del rosario. Actividad de snorkel incluida en la Isla de Majayura. ️Avistamiento de la avioneta sumergida de Pablo Escobar Gaviria. Almuerzo en la isla privada Vistamar (Isla grande), tres opciones: pescado frito, pechuga asada, vegetariano; acompañado de arroz con coco, patacones y ensalada. Degustación Cóctel de mariscos, bienvenida en la isla cholón, Full Party. Sillas en Agua azul. Sunset en playa tranquila, uso de las instalaciones del restaurante. Actividad del plancton. Retorno en bus hasta la zona hotelera Bocagrande y Laguito. HORA DE RECOGIDA 7:30 AM a 8 AM RETORNO 8PM. IMPORTANTE * Los pasajeros hospedados en zona norte, son recogidos en la puerta del hotel o un punto acordado, pero de regreso quedan en la torre del reloj. * Indicar a los pasajeros estar puntuales en el lobby del hotel, para evitar inconvenientes a la hora de la recogida.* Antes de consumir cualquier producto o servicio en playa, consultar el valor. *De preferencia usar efectivo para realizar pagos en playa. * Cuidar sus pertenencias dentro y fuera del bus, la agencia no se hace responsable por pérdida de artículos personales.",
+      "fotoPerfil": "null",
+      "todasFotos": "null",
+      "categoria": "Pasa Dias"
+     },
+     {
+      "id": 11,
+      "nombre": "Tours Islas Del Rosario",
+      "descripcion": "trasnporte de lancha rapida, embarcacioes desde 20 a 54 personas, Recorrido panoramico por las islas del rosario, llegada a la islas San Martin de pajarales donde se encuentra el Oceanario el Cual presenta un especctaculo de Delfines y tiburones cuya entrada es adicional, llegada a playa blanca en la isla de baru, almierzo tipico Arroz de coco, patacones, ensaladda pescado frito, reffresco. NOTA NO INCLUYE: impuesto nuelle, show de delfines, snorkleeling, alquiler de sillas playeras o parasoles",
+      "fotoPerfil": "null",
+      "todasFotos": "null",
+      "categoria": "Pasa Dias"
+     },
+     {
+      "id": 12,
+      "nombre": "PAUE BEACH CLUB",
+      "descripcion": "PROHIBIDO EL INGRESO DE BEBIDAS (ALCOHÓLICAS Y NO ALCOHÓLICAS) Y ALIMENTOS. PROHIBIDO EL INGRESO DE ARMAS DE FUEGO Y SUSTANCIAS ALUCINÓGENAS. POLÍTICA DE CANCELACIÓN Y/O REEMBOLSO.Todas las reservaciones están sujetas a disponibilidad de cupos y no pueden ser garantizadas hasta haber. recibido el pago. En caso de cambio de fecha de la reservación solo se hará bajo disponibilidad y está sujeto a las condiciones de la isla. CONDICIONES DE CANCELACIÓN.Si cancela su reserva hasta 24 horas antes del pasadía podrás reagendar la fecha dentro de un plazo máximo de seis meses. NOTA: Igualmente el cliente podría transferir su reserva a un tercero en caso que lo desee. Si el pasadía NO se aplaza 24 horas antes, o el pasajero no se presenta en el muelle NO SHOW, perderá por completo su abono. Los clientes podrán retractarse hasta 24 horas antes del servicio y se reembolsará el 80% del servicio, el 20% restante corresponden a gastos administrativos, pasado el plazo NO aplicará ningún tipo de reembolso. PAUE BEACH LOUNGE no estará obligado a reembolsar ninguna suma si por causas ajenas, de fuerza mayor o relacionadas con la pandemia, el cliente no se presenta oportunamente el día de su reserva o llega con posterioridad a la hora de embarque.Mujeres embarazadas y/o con niños de brazo viajan bajo su propia responsabilidad.",
+      "fotoPerfil": "null",
+      "todasFotos": "null",
+      "categoria": "Pasa Dias"
+     },
+     {
+      "id": 13,
+      "nombre": "Luxury Ambiente Beach",
+      "descripcion": "Transporte en lancha tipo Triton. Barra abierta bebida nacional ilimitada: cerveza de dia, piña colada, coco loco, Gin tonic, Daiquiri, Tequila Sunrise, Caipiriña, Caipiroska, Mojito, Cuba Libre, agua, Gaseosa y Limonada. Servicio en la Barra. Parasol & asoleadora playera. Almuerzo tipco con 3 opciones,. Opcional: recorrido panoramico con parada en el oceanario. Ducha en la playa (lllevar su toalla)",
+      "fotoPerfil": "null",
+      "todasFotos": "null",
+      "categoria": "Pasa Dias"
+     },
+     {
+      "id": 14,
+      "nombre": "Luxury Ambiente VIP",
+      "descripcion": "Transporte en lancha tipo Bote Deportivo. Barra abierta bebida nacional ilimitada: cerveza de dia,soda saborizada, piña colada, coco loco, Gin tonic, Daiquiri, Tequila Sunrise, Caipiriña, Caipiroska, Mojito, Cuba Libre, agua, Gaseosa y Limonada. Servicio en la Barra y a la cama. DJ rodos los dias. Cama playera por pareja. Almuerzo tipco con 10 opciones,. Opcional: recorrido panoramico con parada en el oceanario. Ducha en la playa (lllevar su toalla)",
+      "fotoPerfil": "null",
+      "todasFotos": "null",
+      "categoria": "Pasa Dias"
+     },
+     {
+      "id": 15,
+      "nombre": "Palmarito Beach",
+      "descripcion": "DAY TOUR PALMARITO BEACH.Adultos: $210.000 por persona.Niños (4-10 AÑOS) $160.000.Niños menores de 3 años no pagan pero deben asumir los consumos.INCLUYE:..Transporte en lancha ida y regreso con salida desde la playa del nuevo hospital de Bocagrande.Bebida de Bienvenida.Almuerzo Tipo Buffet.Uso de las instalaciones, sillas asoleadoras o Kioskos de Palma (Ubicación es según disponibilidad en orden de llegada).Piscina.Uso de Kayaks y tablas de Paddles.NO INCLUYE: Toallas, ni servicio de SPA.HORARIO DE SALIDA HACIA EL HOTEL Desde las 8 am hasta 12:00PM.RETORNO A CARTAGENA Desde las 2:30 pm a 4:30 pm.ES PROHIBIDO EL INGRESO DE BEBIDAS Y ALIMENTOS EN EL HOTEL",
+      "fotoPerfil": "null",
+      "todasFotos": "null",
+      "categoria": "Pasa Dias"
+     },
+     {
+      "id": 16,
+      "nombre": "Apartamento piso 2301",
+      "descripcion": " 3 habitaciones.capacidad para 8 personas .⁠vista al mar .aire acondicionado en sala, habitaciones.⁠cocina equipada.⁠zona de lavado con torre de secado.",
+      "fotoPerfil": "null",
+      "todasFotos": "null",
+      "categoria": "Apartamentos"
+     },
+     {
+      "id": 17,
+      "nombre": "Apartamento piso 3302",
+      "descripcion": "• 2 habitaciones .capacidad para 6 personas .⁠vista al mar .⁠aire acondicionado. ⁠cocina .⁠zona de lavado con torre de secado",
+      "fotoPerfil": "null",
+      "todasFotos": "null",
+      "categoria": "Apartamentos"
+     }
+    ],
+    "categoria":[
+     {
+      "id": 1,
+      "categoria": "Tures"
+     },
+     {
+      "id": 2,
+      "categoria": "Catamaran"
+     },
+     {
+      "id": 3,
+      "categoria": "Botes Rapidos"
+     },
+     {
+      "id": 4,
+      "categoria": "Yates"
+     },
+     {
+      "id": 5,
+      "categoria": "Casas"
+     },
+     {
+      "id": 6,
+      "categoria": "Transporte"
+     },
+     {
+      "id": 7,
+      "categoria": "Pasa Dias"
+     },
+     {
+      "id": 8,
+      "categoria": "Apartamentos"
+     },
+     {
+      "id": 9,
+      "categoria": "Decoraciones"
+     }
+    ],
+    "enjoy cartagena":[
+     {
+      "id": 1,
+      "idProduct": 9
+     },
+     {
+      "id": 2,
+      "idProduct": 10
+     },
+     {
+      "id": 3,
+      "idProduct": 11
+     },
+     {
+      "id": 4,
+      "idProduct": 12
+     }
+    ],
+    "covers":[
+     {
+      "id": 1,
+      "foto": "https://drive.google.com/file/d/1XA8sL7Gi1G7EOt9zAQy-VI3BjFRRaYuq/view?usp=drive_link"
+     },
+     {
+      "id": 2,
+      "foto": "https://drive.google.com/file/d/1X6XciX30d9QaFOZV78Gw768Qf_GDm3gF/view?usp=drive_link"
+     },
+     {
+      "id": 3,
+      "foto": "https://drive.google.com/drive/u/2/folders/164g5BaRK1aMlc4kulFIjHUjBjLjruT6q"
+     },
+     {
+      "id": 4,
+      "foto": "https://drive.google.com/drive/u/2/folders/164g5BaRK1aMlc4kulFIjHUjBjLjruT6q"
+     },
+     {
+      "id": 5,
+      "foto": "https://drive.google.com/file/d/1Vlw2zTizUzfNszJekeIXhzje4WWVsl6z/view?usp=drive_link"
+     },
+     {
+      "id": 6,
+      "foto": "https://drive.google.com/file/d/1GzjndFhK3ZkriutYFKvrY8o0by3dJwWT/view?usp=drive_link"
+     }
+    ],
+    "favoriteTours":[
+     {
+      "id": 1,
+      "idProduct": 11
+     },
+     {
+      "id": 2,
+      "idProduct": 12
+     },
+     {
+      "id": 3,
+      "idProduct": 9
+     },
+     {
+      "id": 4,
+      "idProduct": 10
+     },
+     {
+      "id": 5,
+      "idProduct": 13
+     },
+     {
+      "id": 6,
+      "idProduct": 14
+     }
+    ],
+    "video":[
+     {
+      "url": "null"
+     }
+    ],
+    "redes":[
+     {
+      "url": "https://www.facebook.com/share/1BU7wKjaUE/?mibextid=wwXIfr",
+      "nombre": "facebook"
+     },
+     {
+      "url": "https://www.instagram.com/barrettotransfer_ctg?igsh=MWVucGI4MmJ3bnhnZg%3D%3D&utm_source=qr",
+      "nombre": "instagram"
+     },
+     {
+      "url": "https://w.app/barretotranfers",
+      "nombre": "whatsapp"
+     },
+     {
+      "url": "https://www.tiktok.com/@barretto.transfer?_t=ZS-8u3NXRdYrpa&_r=1",
+      "nombre": "tiktok"
+     }
+    ]
+    }

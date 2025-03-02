@@ -1,14 +1,14 @@
 import GalleryEnjoy from "./galleryEnjoy";
-import GalleryTours from "./galleryTours"
+import GalleryTours from "./galleryTours";
+import Link from "next/link"
 
 const Enjoy = ({items}) =>{
 
-console.log(items,"resultados enjoy")
 
 const enjoy=items.enjoCyartagena;
 const favorites=items.favoriteTours
 const product= items.productos
-console.log("enjoy:",enjoy,"productos",product);
+
 
 const getProductsInEnjoy = (enjoy = [], products = []) => {
   if (!Array.isArray(enjoy) || !Array.isArray(products)) {
@@ -19,7 +19,7 @@ const getProductsInEnjoy = (enjoy = [], products = []) => {
   return products.filter(p => enjoyProductIds.has(String(p.id)));
 };
 const productsInEnjoy = getProductsInEnjoy(items.enjoCyartagena, items.productos);
-console.log("Productos que están en enjoy:", productsInEnjoy)
+
 
 const getProductsInFavorites = (favorites = [], products = []) => {
   if (!Array.isArray(favorites) || !Array.isArray(products)) {
@@ -30,23 +30,26 @@ const getProductsInFavorites = (favorites = [], products = []) => {
   return products.filter(p => FavoritesProductIds.has(String(p.id)));
 };
 const productsInFavorite = getProductsInFavorites(items.favoriteTours, items.productos);
-console.log("Productos que están en favoritos:", productsInFavorite)
+
 
     return(
         <>
         <div className="relative w-full sm:px-6 border-b-2 mt-2 mx-auto">
         <h1 className="text-md font-bold text-cyan-800 uppercase text-start p-2">Descubre en Cartagena</h1>
-        <div className="mx-auto justify-items-center w-full">
+        <div className="mx-auto justify-items-start w-full">
             <GalleryEnjoy cards={productsInEnjoy}/>
         </div>
         </div>
 
-        <div className="h-[24vh] bg-cyan-400 flex justify-center items-center my-5">
-        <h1 className="text-white text-3xl font-bold">label Page</h1>
+        <div className="bg-blue-600 flex flex-col justify-center items-center my-5 p-10 space-y-2">
+        <h1 className="text-white text-3xl font-bold">aprovecha nuestros vehiculos, para tus pasesos o recorridos, dentro y fuera de la ciudad</h1>
+        <Link href="/boxProduct?category=Transporte">
+          <p className = "p-2 text-md  rounded-full bg-yellow-400 text-blue-600 hover:bg-white hover:text-yellow-400 hover:font-bold">Solo da click aqui</p>
+        </Link>
         </div>
 
         <div className="relative w-full sm:px-6 border-b-2 mt-4 mx-auto">
-        <h1 className="text-md font-bold text-cyan-800 uppercase text-start p-2">Featured Tours </h1>
+        <h1 className="text-md font-bold text-cyan-800 uppercase text-start p-2">Tours Favoritos</h1>
         <div className="mx-auto justify-items-center w-full">
             <GalleryTours cards={productsInFavorite}/>
         </div>

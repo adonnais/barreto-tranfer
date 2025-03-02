@@ -1,3 +1,6 @@
+import Link from "next/link"
+
+
 const GalleryEnjoy = ({cards}) => {
     const card = cards;
     const truncateText = (text, wordLimit = 30) => {
@@ -6,6 +9,7 @@ const GalleryEnjoy = ({cards}) => {
       const words = text.split(" ");
       return words.length > wordLimit ? words.slice(0, wordLimit).join(" ") + "..." : text;
     };
+    console.log(card)
     
  
     return (
@@ -18,9 +22,11 @@ const GalleryEnjoy = ({cards}) => {
                 <div className="p-4 text-center">
                   <h2 className="text-lg font-bold">{card.nombre}</h2>
                   <p className="text-gray-600 text-sm text-start lowercase">{truncateText(card.descripcion, 30)}</p>
+                  <Link key={card.id} href={`/singleProduct?idProduct=${encodeURIComponent(card.id)}`}>
                   <button className="mt-2 px-4 py-2 bg-blue-500 text-white text-sm rounded-lg hover:bg-blue-600 transition">
                     Ver más
                   </button>
+                  </Link>
                 </div>
               </div>
             ))}

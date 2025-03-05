@@ -28,7 +28,7 @@ export default function Gallery() {
   }, []);
 
   return (
-    <div className="w-screem mx-auto pt-10 lg:pt-0">
+    <div className="w-screem mx-auto pt-10 lg:pt-0 h-screem">
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         slidesPerView={1}

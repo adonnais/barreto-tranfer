@@ -1,36 +1,51 @@
 'use client'
-import Cover from './cover';
-import Enjoy from './enjoy';
-import Video from './video';
-import Feedback from './feedback'
-import { useState, useEffect } from "react";
+import dynamic from 'next/dynamic';
+import { useState, useEffect } from 'react';
 
+// Carga dinámica con un componente de Loading
+const Cover = dynamic(() => import('./cover'), { loading: () => <p>Cargando Cover...</p> });
+const Enjoy = dynamic(() => import('./enjoy'), { loading: () => <p>Cargando Enjoy...</p> });
+const Video = dynamic(() => import('./video'), { loading: () => <p>Cargando Video...</p> });
+const Feedback = dynamic(() => import('./feedback'), { loading: () => <p>Cargando Feedback...</p> });
 
 export default function Index() {
   const [items, setItems] = useState([]);
-  
-    useEffect(() => {
-      const fetchData = async () => {
-        try {
-          const response = await fetch('/barreto-tranfer.json');
-          if (!response.ok) {
-            throw new Error('Error al cargar el archivo JSON');
-          }
-          const jsonData = await response.json();
-          setItems(jsonData);
-        } catch (error) {
-          console.error('Hubo un problema con la petición Fetch:', error);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('/barreto-tranfer.json');
+        if (!response.ok) {
+          throw new Error('Error al cargar el archivo JSON');
         }
-      };
-      fetchData();
-    }, []);
+        const jsonData = await response.json();
+        setItems(jsonData);
+      } catch (error) {
+        console.error('Hubo un problema con la petición Fetch:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchData();
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="fixed inset-0 flex items-center justify-center bg-white bg-opacity-90 z-50">
+        <div className="p-6 bg-white shadow-lg rounded-lg">
+          <p className="text-lg font-semibold">Cargando datos...</p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <>
-     <Cover items={items} />
-     <Enjoy items={items}/>
-     <Video items={items} />
-     <Feedback items={items} />
-     
+      <Cover items={items} />
+      <Enjoy items={items} />
+      <Video items={items} />
+      <Feedback items={items} />
     </>
   );
 }

@@ -5,7 +5,7 @@ import Link from "next/link"
 const Enjoy = ({items}) =>{
 
 
-const enjoy=items.enjoCyartagena;
+const enjoy=items.enjoyCartagena;
 const favorites=items.favoriteTours
 const product= items.productos
 
@@ -18,7 +18,7 @@ const getProductsInEnjoy = (enjoy = [], products = []) => {
   const enjoyProductIds = new Set(enjoy.map(e => String(e.idProduct)));
   return products.filter(p => enjoyProductIds.has(String(p.id)));
 };
-const productsInEnjoy = getProductsInEnjoy(items.enjoCyartagena, items.productos);
+const productsInEnjoy = getProductsInEnjoy(items.enjoyCartagena, items.productos);
 
 
 const getProductsInFavorites = (favorites = [], products = []) => {

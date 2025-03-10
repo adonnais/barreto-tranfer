@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
+import Image from "next/image";
 import Link from "next/link";
 
 const BoxProduct = () => {
@@ -38,8 +39,14 @@ const BoxProduct = () => {
     return words.length > wordLimit ? words.slice(0, wordLimit).join(" ") + "..." : text;
   };
 
+  // Función para transformar enlaces de Dropbox
+  const transformDropboxLink = (url) => {
+    if (!url || typeof url !== "string") return "/placeholder.jpg"; // Imagen de respaldo
+    return url.replace("www.dropbox.com", "dl.dropboxusercontent.com");
+  };
+
   return (
-    <div className="lg:pt-[10%] pt-[15%]  px-6">
+    <div className="lg:pt-[10%] pt-[15%] px-6">
       <h1 className="text-2xl font-bold text-center">Caja de productos</h1>
       <p className="text-lg text-gray-700 mt-2 text-center">
         Mostrando productos de la categoría:{" "}
@@ -54,17 +61,25 @@ const BoxProduct = () => {
       ) : products.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-6">
           {products.map((card, index) => (
-            <div key={index} className="bg-white shadow-lg rounded-lg">
-              <img src={card.image} alt={card.nombre} className="w-full h-48 object-cover rounded-t-lg" />
+            <div key={index} className="bg-white shadow-lg rounded-lg overflow-hidden">
+              {/* Imagen con transformación de Dropbox */}
+              <Image 
+                src={transformDropboxLink(card.fotoPerfil)} 
+                alt={card.nombre} 
+                width={300} 
+                height={200} 
+                className="w-full h-48 object-cover rounded-t-lg"
+                unoptimized
+              />
               <div className="p-4 text-center">
                 <h2 className="text-lg font-bold">{card.nombre}</h2>
                 <p className="text-gray-600 text-sm text-start lowercase">
                   {truncateText(card.descripcion, 30)}
                 </p>
                 <Link href={`/singleProduct?idProducto=${card.id}`}>
-                <button className="mt-2 px-4 py-2 bg-blue-500 text-white text-sm rounded-lg hover:bg-blue-600 transition">
-                  Ver más
-                </button>
+                  <button className="mt-2 px-4 py-2 bg-blue-500 text-white text-sm rounded-lg hover:bg-blue-600 transition">
+                    Ver más
+                  </button>
                 </Link>
               </div>
             </div>

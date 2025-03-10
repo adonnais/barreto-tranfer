@@ -32,10 +32,10 @@ export default function Index() {
 
   if (loading) {
     return (
-      <div className="fixed inset-0 flex items-center justify-center bg-white bg-opacity-90 z-50">
-        <div className="p-6 bg-white shadow-lg rounded-lg">
+      <div className="fixed inset-0 flex items-center justify-center bg-white z-50">
+        
           <p className="text-lg font-semibold">Cargando datos...</p>
-        </div>
+       
       </div>
     );
   }

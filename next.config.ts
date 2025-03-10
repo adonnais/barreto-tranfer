@@ -1,15 +1,9 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true, // Habilita el modo estricto para detectar errores en desarrollo
   images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "drive.google.com",
-      },
-    ],
+    domains: ["dl.dropboxusercontent.com"], // Permite imágenes desde Dropbox
   },
 };
 
-export default nextConfig;
+module.exports = nextConfig;

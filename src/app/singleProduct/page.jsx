@@ -25,70 +25,6 @@ const transformDropboxLink = (url) => {
   return url.replace("www.dropbox.com", "dl.dropboxusercontent.com");
 };
 
-const fetchDropboxImages = async (folderPath) => {
-  try {
-    if (!folderPath || typeof folderPath !== "string") {
-      console.error("Error: `folderPath` no es válido:", folderPath);
-      return [];
-    }
-
-    console.log("Obteniendo imágenes de Dropbox en:", folderPath);
-
-    const response = await fetch("https://api.dropboxapi.com/2/files/list_folder", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${DROPBOX_ACCESS_TOKEN}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ path: folderPath }),
-    });
-
-    if (!response.ok) {
-      const errorText = await response.text();
-      console.error("Error en Dropbox API:", errorText);
-      throw new Error(`Error en la API de Dropbox: ${errorText}`);
-    }
-
-    const data = await response.json();
-    console.log("Respuesta de Dropbox:", data);
-
-    const imageFiles = data.entries?.filter(
-      (file) => file[".tag"] === "file" && /\.(jpg|jpeg|png|gif)$/i.test(file.name)
-    ) || [];
-
-    const imageLinks = await Promise.all(
-      imageFiles.map(async (file) => {
-        try {
-          const tempLinkResponse = await fetch("https://api.dropboxapi.com/2/files/get_temporary_link", {
-            method: "POST",
-            headers: {
-              Authorization: `Bearer ${DROPBOX_ACCESS_TOKEN}`,
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ path: file.path_lower }),
-          });
-
-          if (!tempLinkResponse.ok) {
-            console.error(`Error obteniendo enlace para ${file.name}`);
-            return null;
-          }
-
-          const tempLinkData = await tempLinkResponse.json();
-          return tempLinkData.link;
-        } catch (error) {
-          console.error("Error obteniendo enlace temporal:", error);
-          return null;
-        }
-      })
-    );
-
-    return imageLinks.filter((link) => link !== null);
-  } catch (error) {
-    console.error("Error al obtener imágenes de Dropbox:", error);
-    return [];
-  }
-};
-
 const SingleProduct = () => {
   const searchParams = useSearchParams();
   const idProducto = searchParams.get("idProducto")?.trim() || null;
@@ -113,9 +49,14 @@ const SingleProduct = () => {
         setMainImage(transformDropboxLink(foundProduct.fotoPerfil));
 
         if (foundProduct.todasFotos) {
-          console.log("Cargando imágenes de la carpeta:", foundProduct.todasFotos);
-          const images = await fetchDropboxImages(foundProduct.todasFotos);
-          setGalleryImages(images);
+          console.log("Cargando imágenes desde la cadena:", foundProduct.todasFotos);
+
+          // Convertir la cadena separada por comas en un array de imágenes
+          const imagesArray = foundProduct.todasFotos
+            .split(",")
+            .map((url) => transformDropboxLink(url.trim()));
+
+          setGalleryImages(imagesArray);
         }
       }
       setLoading(false);
@@ -149,6 +90,7 @@ const SingleProduct = () => {
           <h2 className="text-xl font-semibold">{product.nombre}</h2>
 
           <div className="flex flex-col md:flex-col lg:flex-row gap-6 mt-4">
+            {/* Sección de imágenes */}
             <div className="w-full lg:w-1/2 flex flex-col items-center">
               {mainImage ? (
                 <Image
@@ -165,30 +107,36 @@ const SingleProduct = () => {
                 </div>
               )}
 
-              <div className="flex flex-wrap justify-center gap-2 mt-4">
+              {/* Galería de imágenes adicionales */}
+              {/* Galería de imágenes adicionales */}
+              <div className="flex gap-2 mt-4 overflow-x-auto whitespace-nowrap p-2">
                 {galleryImages.length > 0 ? (
-                  galleryImages.map((foto, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setMainImage(foto)}
-                      className="border-2 border-transparent hover:border-blue-500 p-1 rounded-lg transition"
-                    >
-                      <Image
-                        src={foto}
-                        width={100}
-                        height={100}
-                        alt={`Vista ${index + 1}`}
-                        className="rounded-md object-cover w-24 h-24"
-                        unoptimized
-                      />
-                    </button>
-                  ))
+                  <div className="flex flex-nowrap">
+                    {galleryImages.map((foto, index) => (
+                      <button
+                        key={index}
+                        onClick={() => setMainImage(foto)}
+                        className="border-2 border-transparent hover:border-blue-500 p-1 rounded-lg transition"
+                      >
+                        <Image
+                          src={foto}
+                          width={100}
+                          height={100}
+                          alt={`Vista ${index + 1}`}
+                          className="rounded-md object-cover w-24 h-24"
+                          unoptimized
+                        />
+                      </button>
+                    ))}
+                  </div>
                 ) : (
                   <p className="text-gray-500">No hay imágenes adicionales</p>
                 )}
               </div>
+
             </div>
 
+            {/* Sección de descripción y botón de WhatsApp */}
             <div className="w-full lg:w-1/2">
               {formatDescription(product.descripcion)}
               <button

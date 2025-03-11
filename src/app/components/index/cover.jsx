@@ -10,6 +10,11 @@ import { useState, useEffect } from "react";
 export default function Gallery() {
   const [images, setImages] = useState([]);
 
+  const transformDropboxLink = (url) => {
+    if (!url || typeof url !== "string") return "";
+    return url.replace("www.dropbox.com", "dl.dropboxusercontent.com");
+  };
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -18,8 +23,16 @@ export default function Gallery() {
           throw new Error('Error al cargar el archivo JSON');
         }
         const jsonData = await response.json();
-        setImages(jsonData.covers);
-
+        
+        // Asegurarse de que covers es un array y transformar sus URLs
+        if (Array.isArray(jsonData.covers)) {
+          const transformedImages = jsonData.covers.map((item) => ({
+            id: item.id,
+            foto: transformDropboxLink(item.foto)
+          }));
+          setImages(transformedImages);
+        }
+        
       } catch (error) {
         console.error('Hubo un problema con la petición Fetch:', error);
       }
@@ -28,7 +41,7 @@ export default function Gallery() {
   }, []);
 
   return (
-    <div className="w-screem mx-auto pt-10 lg:pt-0 h-screem">
+    <div className="w-full mx-auto pt-10 lg:pt-0 ">
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         slidesPerView={1}
@@ -38,9 +51,9 @@ export default function Gallery() {
         loop
         className="shadow-lg"
       >
-        {images.map((index) => (
-          <SwiperSlide key={index.id}>
-            <img src={index.foto} alt={`Slide ${index.id + 1}`} className="w-full h-full lg:h-[50%] object-cover  bg-cyan-500" />
+        {images.map((image) => (
+          <SwiperSlide key={image.id}>
+            <img src={image.foto} alt={`Slide ${image.id}`} className="w-full h-full lg:h-[50%] object-cover bg-cyan-500" />
           </SwiperSlide>
         ))}
       </Swiper>

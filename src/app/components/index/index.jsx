@@ -42,10 +42,11 @@ export default function Index() {
 
   return (
     <>
+    <div className="space-y-5 lg:pt-[16px] pt-[14px]">
       <Cover items={items} />
       <Enjoy items={items} />
-      <Video items={items} />
       <Feedback items={items} />
+    </div>
     </>
   );
 }

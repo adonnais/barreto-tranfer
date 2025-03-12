@@ -1,5 +1,7 @@
 {
   "hosting": {
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "public": "main",
     "ignore": [
       "firebase.json",
@@ -10,6 +12,19 @@
       {
         "source": "**",
         "destination": "/index.html"
+=======
+=======
+>>>>>>> Stashed changes
+    "public": "public",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [
+      {
+        "source": "**",
+        "function": "nextApp"
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
       }
     ]
   }

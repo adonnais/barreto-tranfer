@@ -6,7 +6,11 @@ on:
   push:
     branches:
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       - main
+=======
+      - lauch
+>>>>>>> Stashed changes
 =======
       - lauch
 >>>>>>> Stashed changes
@@ -16,7 +20,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       - run: npm run build
+=======
+      - run: npm ci && npm run build
+>>>>>>> Stashed changes
 =======
       - run: npm ci && npm run build
 >>>>>>> Stashed changes

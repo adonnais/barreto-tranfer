@@ -1,11 +1,9 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 
-// Acceso al token de Dropbox
-const DROPBOX_ACCESS_TOKEN = process.env.NEXT_PUBLIC_DROPBOX_ACCESS_TOKEN;
-
+// Función para obtener el producto filtrado
 const fetchAndFilterProduct = async (idProducto) => {
   try {
     const response = await fetch("/barreto-tranfer.json");
@@ -20,12 +18,13 @@ const fetchAndFilterProduct = async (idProducto) => {
   }
 };
 
+// Transformar enlaces de Dropbox
 const transformDropboxLink = (url) => {
   if (!url || typeof url !== "string") return "";
   return url.replace("www.dropbox.com", "dl.dropboxusercontent.com");
 };
 
-const SingleProduct = () => {
+const SingleProductContent = () => {
   const searchParams = useSearchParams();
   const idProducto = searchParams.get("idProducto")?.trim() || null;
 
@@ -51,7 +50,6 @@ const SingleProduct = () => {
         if (foundProduct.todasFotos) {
           console.log("Cargando imágenes desde la cadena:", foundProduct.todasFotos);
 
-          // Convertir la cadena separada por comas en un array de imágenes
           const imagesArray = foundProduct.todasFotos
             .split(",")
             .map((url) => transformDropboxLink(url.trim()));
@@ -108,7 +106,6 @@ const SingleProduct = () => {
               )}
 
               {/* Galería de imágenes adicionales */}
-              {/* Galería de imágenes adicionales */}
               <div className="flex gap-2 mt-4 overflow-x-auto whitespace-nowrap p-2">
                 {galleryImages.length > 0 ? (
                   <div className="flex flex-nowrap">
@@ -133,7 +130,6 @@ const SingleProduct = () => {
                   <p className="text-gray-500">No hay imágenes adicionales</p>
                 )}
               </div>
-
             </div>
 
             {/* Sección de descripción y botón de WhatsApp */}
@@ -152,6 +148,14 @@ const SingleProduct = () => {
         <p className="text-red-500 mt-2">Producto no encontrado.</p>
       )}
     </div>
+  );
+};
+
+const SingleProduct = () => {
+  return (
+    <Suspense fallback={<p className="text-gray-600 mt-4">Cargando producto...</p>}>
+      <SingleProductContent />
+    </Suspense>
   );
 };
 

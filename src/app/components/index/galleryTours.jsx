@@ -35,7 +35,7 @@ const GalleryTours = ({ cards }) => {
               unoptimized
             />
             <div className="p-4 text-center">
-              <h2 className="text-lg font-bold">{card.nombre}</h2>
+              <h2 className="text-lg font-bold text-black">{card.nombre}</h2>
               <p className="text-gray-600 text-sm text-start lowercase">
                 {truncateText(card.descripcion, 30)}
               </p>

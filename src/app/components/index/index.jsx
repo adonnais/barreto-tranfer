@@ -7,6 +7,7 @@ const Cover = dynamic(() => import('./cover'), { loading: () => <p>Cargando Cove
 const Enjoy = dynamic(() => import('./enjoy'), { loading: () => <p>Cargando Enjoy...</p> });
 const Video = dynamic(() => import('./video'), { loading: () => <p>Cargando Video...</p> });
 const Feedback = dynamic(() => import('./feedback'), { loading: () => <p>Cargando Feedback...</p> });
+const Footer = dynamic(() => import('./footer'), { loading: () => <p>Cargando Footer...</p> });
 
 export default function Index() {
   const [items, setItems] = useState([]);
@@ -33,20 +34,17 @@ export default function Index() {
   if (loading) {
     return (
       <div className="fixed inset-0 flex items-center justify-center bg-white z-50">
-        
-          <p className="text-lg font-semibold">Cargando datos...</p>
-       
+        <p className="text-lg font-semibold">Cargando datos...</p>
       </div>
     );
   }
 
   return (
-    <>
     <div className="space-y-5 lg:pt-[16px] pt-[14px]">
       <Cover items={items} />
       <Enjoy items={items} />
       <Feedback items={items} />
+      <Footer />
     </div>
-    </>
   );
 }

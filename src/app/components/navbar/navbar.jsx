@@ -76,20 +76,22 @@ const handleSearch = (e) => {
           >
             <div className="bg-white w-full p-5 rounded-t-lg relative">
               <div className="border-b pb-2 mt-10">
-                <form onSubmit={handleSearch} className="relative w-full max-w-md">
-                  <input 
-                    type="text" 
-                    placeholder="Buscar..." 
-                    value={query} 
-                    onChange={(e) => setQuery(e.target.value)} 
-                    className="w-full px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-full shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none" 
-                  />
-                  <button type="submit" className="absolute inset-y-0 right-3 flex items-center text-gray-500 hover:text-blue-600">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-4.35-4.35m2.85-6.15a7.5 7.5 0 11-15 0 7.5 7.5 0 0115 0z" />
-                    </svg>
-                  </button>
-                </form>
+              <form onSubmit={handleSearch} className="w-full">
+          <div className="relative">
+            <input
+              type="text"
+              placeholder="Buscar..."
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              className="w-full px-4 py-2 border border-gray-300 rounded-full shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+            />
+            <button type="submit" className="absolute inset-y-0 right-3 flex items-center text-gray-500 hover:text-blue-600">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-4.35-4.35m2.85-6.15a7.5 7.5 0 11-15 0 7.5 7.5 0 0115 0z" />
+              </svg>
+            </button>
+          </div>
+        </form>
               </div>
               <div className="h-[1px] my-2 bg-black"></div>
               <div className="flex flex-col space-y-2">

@@ -1,4 +1,70 @@
 {
+
+   "covers":[
+      {
+       "id": 1,
+       "foto": "https://www.dropbox.com/scl/fi/xgb7s0dw3z4vdn84gnnx8/Mesa-de-trabajo-1-100.webp?rlkey=8p3k326u9e6drnifmhentez06&st=y1t8afss&dl=0"
+      },
+      {
+       "id": 2,
+       "foto": "https://www.dropbox.com/scl/fi/vx6k6o2w2kigzm4m9rh1k/Recurso-4-100.webp?rlkey=dxabytgdu4rk4x2uzin215nno&st=n0h3n90g&dl=0"
+      },
+      {
+       "id": 3,
+       "foto": "https://www.dropbox.com/scl/fi/wgisj80429ff8mkmjygo5/Mesa-de-trabajo-3-100.webp?rlkey=6fmureayuoy6w8p2uwltnwigh&st=g6fcl3of&dl=0"
+      },
+      {
+       "id": 4,
+       "foto": "https://www.dropbox.com/scl/fi/qieq5wowutjzzeullm3ia/Mesa-de-trabajo-4-100.webp?rlkey=bpgvoupmxb5fgl67yhl86e2sg&st=rgv5t6h5&dl=0"
+      },
+      {
+       "id": 5,
+       "foto": "https://www.dropbox.com/scl/fi/ujkns33f2ai4rp44838dg/Mesa-de-trabajo-6-100.webp?rlkey=q1aac18ucaxnaopbgjqs1uine&st=usxi7jq7&dl=0"
+      },
+      {
+       "id": 6,
+       "foto": "https://www.dropbox.com/scl/fi/ujkns33f2ai4rp44838dg/Mesa-de-trabajo-6-100.webp?rlkey=q1aac18ucaxnaopbgjqs1uine&st=usxi7jq7&dl=0"
+      }
+     ],
+"categoria":[
+     {
+      "id": 1,
+      "categoria": "Toures"
+     },
+     {
+      "id": 2,
+      "categoria": "Catamaran"
+     },
+     {
+      "id": 3,
+      "categoria": "Botes Deportivos"
+     },
+     {
+      "id": 4,
+      "categoria": "Yates"
+     },
+     {
+      "id": 5,
+      "categoria": "Casas"
+     },
+     {
+      "id": 6,
+      "categoria": "Transporte"
+     },
+     {
+      "id": 7,
+      "categoria": "Pasa Dias"
+     },
+     {
+      "id": 8,
+      "categoria": "Apartamentos con vista al mar"
+     },
+     {
+      "id": 9,
+      "categoria": "Decoraciones"
+     }
+    ],
+
    "productos":[
     {
      "id": 16,
@@ -177,92 +243,31 @@
      "categoria": "Botes Rapidos"
     }
    ],
-    "categoria":[
-     {
-      "id": 1,
-      "categoria": "Tures"
-     },
-     {
-      "id": 2,
-      "categoria": "Catamaran"
-     },
-     {
-      "id": 3,
-      "categoria": "Botes Rapidos"
-     },
-     {
-      "id": 4,
-      "categoria": "Yates"
-     },
-     {
-      "id": 5,
-      "categoria": "Casas"
-     },
-     {
-      "id": 6,
-      "categoria": "Transporte"
-     },
-     {
-      "id": 7,
-      "categoria": "Pasa Dias"
-     },
-     {
-      "id": 8,
-      "categoria": "Apartamentos"
-     },
-     {
-      "id": 9,
-      "categoria": "Decoraciones"
-     }
-    ],
 
-    "enjoyCartagena":[
+   "enjoyCartagena":[
      {
   "id": 1,
   "idProduct": 9
  },
  {
   "id": 2,
-  "idProduct": 10
+  "idProduct": 2
  },
  {
   "id": 3,
-  "idProduct": 11
+  "idProduct": 18
  },
  {
   "id": 4,
-  "idProduct": 12
+  "idProduct": 15
+ },
+ {
+  "id": 5,
+  "idProduct": 17
  }
     ],
 
-    "covers":[
-     {
-      "id": 1,
-      "foto": "https://www.dropbox.com/scl/fi/wfnbc7mtybhe7azo3gvvn/Mesa-de-trabajo-1.webp?rlkey=b5fi6jwo90nndjui2oly1kxpw&st=amt0vgan&dl=0"
-     },
-     {
-      "id": 2,
-      "foto": "https://www.dropbox.com/scl/fi/i785u4x0tjmqbf2tdw6nt/Mesa-de-trabajo-2.webp?rlkey=mt8xgjxl99fgwa5pjwa29rxo6&st=7aflkacu&dl=0"
-     },
-     {
-      "id": 3,
-      "foto": "https://www.dropbox.com/scl/fi/0oc2ockoprj62i0gl9jn7/Mesa-de-trabajo-3.webp?rlkey=j1m8pe2h6mmrp4xkdvo88n89f&st=ylojukiw&dl=0"
-     },
-     {
-      "id": 4,
-      "foto": "https://www.dropbox.com/scl/fi/mq8kulpsposf5m3qg7mv2/Mesa-de-trabajo-4.webp?rlkey=kng9dc2zv3nkoeaa17rxggt6h&st=oshrvwrh&dl=0"
-     },
-     {
-      "id": 5,
-      "foto": "https://www.dropbox.com/scl/fi/kjtwpbnp38p80tuhbr4xz/Mesa-de-trabajo-5.webp?rlkey=383i65gic1d1pei60f6r4dtkj&st=zlua89zt&dl=0"
-     },
-     {
-      "id": 6,
-      "foto": "https://www.dropbox.com/scl/fi/ynz5jial7cr74w5nnazak/Mesa-de-trabajo-6.webp?rlkey=n5lj9w9if4iis73bdn0wdi0zs&st=f7z1g0d0&dl=0"
-     }
-    ],
-
-    "favoriteTours":[
+   "favoriteTours":[
      {
       "id": 1,
       "idProduct": 11

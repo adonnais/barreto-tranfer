@@ -41,11 +41,23 @@ const productsInFavorite = getProductsInFavorites(items.favoriteTours, items.pro
         </div>
         </div>
 
-        <div className="bg-blue-600 flex flex-col justify-center items-center my-5 p-10 space-y-2">
-        <h1 className="text-white text-3xl font-bold">aprovecha nuestros vehiculos, para tus pasesos o recorridos, dentro y fuera de la ciudad</h1>
-        <Link href="/boxProduct?category=Transporte">
-          <p className = "p-2 text-md  rounded-full bg-yellow-400 text-blue-600 hover:bg-white hover:text-yellow-400 hover:font-bold">Solo da click aqui</p>
-        </Link>
+        <div className="relative flex flex-col justify-center items-center my-5 p-10 space-y-5 rounded-lg shadow-xl overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-blue-700 to-blue-900 animate-gradient"></div>
+
+          <div className="relative z-10 text-center space-y-5">
+          <h1 className="text-white text-3xl font-bold font-segoe">
+                  Descubre la comodidad y seguridad de viajar con <span className="text-yellow-300">Barreto Transfer</span>.  
+                  Disfruta de nuestros vehículos para tus excursiones y recorridos, dentro y fuera de la ciudad.  
+                  ¡Viaja con confianza, confort y el mejor servicio! 🚗✨
+                </h1>
+
+                <Link href="/boxProduct?category=Transporte">
+                  <p className="p-3 text-lg rounded-full bg-yellow-400 text-blue-600 hover:bg-white hover:text-yellow-400 hover:font-bold shadow-lg transition-all duration-300 animate-bounce cursor-pointer mt-5 font-segoe">
+                    Solo da click aquí
+                  </p>
+                </Link>
+
+          </div>
         </div>
 
         <div className="relative w-full sm:px-6 border-b-2 mt-4 mx-auto">

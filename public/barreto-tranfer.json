@@ -1,30 +1,70 @@
 {
+
    "covers":[
-    {
-     "id": 1,
-     "foto": "https:\/\/www.dropbox.com\/scl\/fi\/xgb7s0dw3z4vdn84gnnx8\/Mesa-de-trabajo-1-100.webp?rlkey=8p3k326u9e6drnifmhentez06&st=suoas70n&dl=0"
-    },
-    {
-     "id": 2,
-     "foto": "https:\/\/www.dropbox.com\/scl\/fi\/vx6k6o2w2kigzm4m9rh1k\/Recurso-4-100.webp?rlkey=dxabytgdu4rk4x2uzin215nno&st=5dxvqzaa&dl=0"
-    },
-    {
-     "id": 3,
-     "foto": "https:\/\/www.dropbox.com\/scl\/fi\/wgisj80429ff8mkmjygo5\/Mesa-de-trabajo-3-100.webp?rlkey=6fmureayuoy6w8p2uwltnwigh&st=qq1g1sz7&dl=0"
-    },
-    {
-     "id": 4,
-     "foto": "https:\/\/www.dropbox.com\/scl\/fi\/qieq5wowutjzzeullm3ia\/Mesa-de-trabajo-4-100.webp?rlkey=bpgvoupmxb5fgl67yhl86e2sg&st=ifi2eh2b&dl=0"
-    },
-    {
-     "id": 5,
-     "foto": "https:\/\/www.dropbox.com\/scl\/fi\/u79l2xk5g9ttlaoqrnrgc\/Mesa-de-trabajo-5-100.webp?rlkey=u3m4mnuye2rj4srg2ffeya494&st=1snwp5ek&dl=0"
-    },
-    {
-     "id": 6,
-     "foto": "https:\/\/www.dropbox.com\/scl\/fi\/ujkns33f2ai4rp44838dg\/Mesa-de-trabajo-6-100.webp?rlkey=q1aac18ucaxnaopbgjqs1uine&st=bmpmgx0e&dl=0"
-    }
-   ],
+      {
+       "id": 1,
+       "foto": "https://www.dropbox.com/scl/fi/xgb7s0dw3z4vdn84gnnx8/Mesa-de-trabajo-1-100.webp?rlkey=8p3k326u9e6drnifmhentez06&st=y1t8afss&dl=0"
+      },
+      {
+       "id": 2,
+       "foto": "https://www.dropbox.com/scl/fi/vx6k6o2w2kigzm4m9rh1k/Recurso-4-100.webp?rlkey=dxabytgdu4rk4x2uzin215nno&st=n0h3n90g&dl=0"
+      },
+      {
+       "id": 3,
+       "foto": "https://www.dropbox.com/scl/fi/wgisj80429ff8mkmjygo5/Mesa-de-trabajo-3-100.webp?rlkey=6fmureayuoy6w8p2uwltnwigh&st=g6fcl3of&dl=0"
+      },
+      {
+       "id": 4,
+       "foto": "https://www.dropbox.com/scl/fi/qieq5wowutjzzeullm3ia/Mesa-de-trabajo-4-100.webp?rlkey=bpgvoupmxb5fgl67yhl86e2sg&st=rgv5t6h5&dl=0"
+      },
+      {
+       "id": 5,
+       "foto": "https://www.dropbox.com/scl/fi/ujkns33f2ai4rp44838dg/Mesa-de-trabajo-6-100.webp?rlkey=q1aac18ucaxnaopbgjqs1uine&st=usxi7jq7&dl=0"
+      },
+      {
+       "id": 6,
+       "foto": "https://www.dropbox.com/scl/fi/ujkns33f2ai4rp44838dg/Mesa-de-trabajo-6-100.webp?rlkey=q1aac18ucaxnaopbgjqs1uine&st=usxi7jq7&dl=0"
+      }
+     ],
+"categoria":[
+     {
+      "id": 1,
+      "categoria": "Toures"
+     },
+     {
+      "id": 2,
+      "categoria": "Catamaran"
+     },
+     {
+      "id": 3,
+      "categoria": "Botes Deportivos"
+     },
+     {
+      "id": 4,
+      "categoria": "Yates"
+     },
+     {
+      "id": 5,
+      "categoria": "Casas"
+     },
+     {
+      "id": 6,
+      "categoria": "Transporte"
+     },
+     {
+      "id": 7,
+      "categoria": "Pasa Dias"
+     },
+     {
+      "id": 8,
+      "categoria": "Apartamentos con vista al mar"
+     },
+     {
+      "id": 9,
+      "categoria": "Decoraciones"
+     }
+    ],
+
    "productos":[
     {
      "id": 16,
@@ -32,7 +72,7 @@
      "descripcion": " 3 habitaciones.capacidad para 8 personas .⁠vista al mar.aire acondicionado en sala, habitaciones.⁠cocina equipada.⁠zona de lavado con torre de secado.",
      "fotoPerfil": "https:\/\/www.dropbox.com\/s\/dyqixvq3izy1y3i\/WhatsApp%20Image%202025-03-04%20at%2015.31.16%20(1).jpeg?st=y8my8vpy&dl=0",
      "todasFotos": "https:\/\/www.dropbox.com\/scl\/fi\/19lw3gfk53t06n1strbby\/WhatsApp-Image-2025-03-04-at-15.31.14.jpeg?rlkey=7f3od22pcb00u1d1wvq9ubtw4&st=za78vmhp&dl=0,https:\/\/www.dropbox.com\/scl\/fi\/tpu7m1dfcxqhlwjp0vu00\/WhatsApp-Image-2025-03-04-at-15.31.15-1.jpeg?rlkey=qbnp65nq8chtij59xjsyulkob&st=5sagi2rq&dl=0,https:\/\/www.dropbox.com\/scl\/fi\/wodvtra1r9ac7sk4alrtn\/WhatsApp-Image-2025-03-04-at-15.31.15-2.jpeg?rlkey=gb8u6v3usurxxeaikv98s3zru&st=rg6brwaz&dl=0,https:\/\/www.dropbox.com\/scl\/fi\/27qv2zn1axe8trm2q1ezh\/WhatsApp-Image-2025-03-04-at-15.31.15.jpeg?rlkey=m7pcur25isl8we21grh7qe6n5&st=qx1ztr1g&dl=0,https:\/\/www.dropbox.com\/s\/dyqixvq3izy1y3i\/WhatsApp%20Image%202025-03-04%20at%2015.31.16%20(1).jpeg?st=6j1mwckl&dl=0,https:\/\/www.dropbox.com\/scl\/fi\/uyo3xsqrsl0pk2zc0mtk9\/WhatsApp-Image-2025-03-04-at-15.31.16-2.jpeg?rlkey=sd8fce45sltg4x1ip9ey5pua5&st=ty2w5g6c&dl=0,https:\/\/www.dropbox.com\/scl\/fi\/exlqb94jzwayl7ga1xhc0\/WhatsApp-Image-2025-03-04-at-15.31.16-3.jpeg?rlkey=3kdo7cfumw62nd9g086chcxnq&st=m6rjlziq&dl=0,https:\/\/www.dropbox.com\/scl\/fi\/0cn0qwr6tpeoi4b9hx5r7\/WhatsApp-Image-2025-03-04-at-15.31.16.jpeg?rlkey=vrzepb27vtky7235j8cx4zdbu&st=39ij3bft&dl=0,https:\/\/www.dropbox.com\/scl\/fi\/59fqlb5pi9bqpk8bkn5zp\/WhatsApp-Image-2025-03-04-at-15.31.17-1.jpeg?rlkey=ggxd5cr2un9qegccal9q7qur1&st=qvvn923q&dl=0,https:\/\/www.dropbox.com\/scl\/fi\/rksf5u1r723ziwzh5b4et\/WhatsApp-Image-2025-03-04-at-15.31.17-2.jpeg?rlkey=2n2fy1pdvayhodiem87opw40r&st=5aa0pvfq&dl=0,https:\/\/www.dropbox.com\/scl\/fi\/3ctgfiw4k7301acrclhco\/WhatsApp-Image-2025-03-04-at-15.34.32-5.jpeg?rlkey=u2qyqv8zm6lc8zusidbftdz7w&st=7f1xuqhx&dl=0",
-     "categoria": "Apartamentos con vista al mar"
+     "categoria": "Apartamentos"
     },
     {
      "id": 9,
@@ -54,8 +94,8 @@
      "id": 4,
      "nombre": "Citrone Jumper 17 puesto",
      "descripcion": "16 puesto + 1 opcional,transporte 24 horas, radio bluetooth, baul espacioso, de gran espacio,sillas reclinables, aire acondicionado",
-     "fotoPerfil": "https://www.dropbox.com/scl/fi/uayvoibf6y9xt0dmoqp08/WhatsApp-Image-2025-02-15-at-09.43.10-1.jpeg?rlkey=0rbmb2pl08udh99wlubwn84uu&st=vb4rwmlv&dl=0",
-     "todasFotos": "https:\/\/www.dropbox.com\/scl\/fi\/vx6k6o2w2kigzm4m9rh1k\/Recurso-4-100.webp?rlkey=dxabytgdu4rk4x2uzin215nno&st=5dxvqzaa&dl=0,https:\/\/www.dropbox.com\/scl\/fi\/ogoqaos46s8ptd36seoze\/WhatsApp-Image-2025-02-15-at-09.43.11.jpeg?rlkey=ttxxpf33rycyjulyh58cwu8vp&st=1zx5c3lg&dl=0",
+     "fotoPerfil": "https:\/\/www.dropbox.com\/s\/m7pydeu9m0dr3lf\/WhatsApp%20Image%202025-02-15%20at%2009.43.10.jpeg?st=6ls4jvoa&dl=0",
+     "todasFotos": "https:\/\/www.dropbox.com\/s\/m7pydeu9m0dr3lf\/WhatsApp%20Image%202025-02-15%20at%2009.43.10.jpeg?st=iw1dh3qg&dl=0,https:\/\/www.dropbox.com\/scl\/fi\/ogoqaos46s8ptd36seoze\/WhatsApp-Image-2025-02-15-at-09.43.11.jpeg?rlkey=ttxxpf33rycyjulyh58cwu8vp&st=59zenf3t&dl=0",
      "categoria": "Transporte"
     },
     {
@@ -63,23 +103,23 @@
      "nombre": "Duster 5 pusto",
      "descripcion": "4,puestos transporte 24 horas, radio bluetooth, baul espacioso, de gran espacio aire acondicionado",
      "fotoPerfil": "https:\/\/www.dropbox.com\/s\/4doxqrrs18s8b2d\/WhatsApp%20Image%202025-03-04%20at%2014.03.51%20(1).jpeg?st=v0cbqvyf&dl=0",
-     "todasFotos": "https:\/\/www.dropbox.com\/scl\/fi\/q1o9qruety6hjrla42lvb\/WhatsApp-Image-2025-03-04-at-14.03.51-1.jpeg?rlkey=zks482wjtxxzpvbgfanisxflc&st=cba7uq3u&dl=0,https:\/\/www.dropbox.com\/scl\/fi\/k396z6009kpqjry1pj4lm\/WhatsApp-Image-2025-03-04-at-14.03.51.jpeg?rlkey=guwhoi91y7u1o8mficypnet7y&st=m27h38mw&dl=0,https:\/\/www.dropbox.com\/scl\/fi\/t8ik0r70e6ju9wplmjffx\/WhatsApp-Image-2025-03-04-at-14.10.20.jpeg?rlkey=04m4azs8zrgrr63jjaauu7xce&st=dev9tbae&dl=0,https:\/\/www.dropbox.com\/scl\/fi\/h1axgevh5atdjwglr5xnf\/WhatsApp-Image-2025-03-04-at-14.10.21.jpeg?rlkey=cjs1l45lxokf1igwjvmep1q57&st=5vl6y4ff&dl=0",
+     "todasFotos": "https:\/\/www.dropbox.com\/s\/4doxqrrs18s8b2d\/WhatsApp%20Image%202025-03-04%20at%2014.03.51%20(1).jpeg?st=ae2wxnbx&dl=0,https:\/\/www.dropbox.com\/scl\/fi\/k396z6009kpqjry1pj4lm\/WhatsApp-Image-2025-03-04-at-14.03.51.jpeg?rlkey=guwhoi91y7u1o8mficypnet7y&st=m27h38mw&dl=0,https:\/\/www.dropbox.com\/scl\/fi\/t8ik0r70e6ju9wplmjffx\/WhatsApp-Image-2025-03-04-at-14.10.20.jpeg?rlkey=04m4azs8zrgrr63jjaauu7xce&st=dev9tbae&dl=0,https:\/\/www.dropbox.com\/scl\/fi\/h1axgevh5atdjwglr5xnf\/WhatsApp-Image-2025-03-04-at-14.10.21.jpeg?rlkey=cjs1l45lxokf1igwjvmep1q57&st=5vl6y4ff&dl=0",
      "categoria": "Transporte"
     },
     {
      "id": 2,
      "nombre": "hiunday 10 puesto",
      "descripcion": "10 puesto + 1 opcional,transporte 24 horas, radio bluetooth, baul espacioso, de gran espacio,sillas reclinables, aire acondicionado",
-     "fotoPerfil": "https://www.dropbox.com/scl/fi/m1ggqtj29of1mplk5vie3/WhatsApp-Image-2025-02-15-at-09.53.38-1-1.jpeg?rlkey=tmlxfgrdb0kbogvk3pqcieiat&st=o35wquoj&dl=0",
-     "todasFotos": "https:\/\/www.dropbox.com\/scl\/fi\/m1ggqtj29of1mplk5vie3\/WhatsApp-Image-2025-02-15-at-09.53.38-1-1.jpeg?rlkey=tmlxfgrdb0kbogvk3pqcieiat&st=aq3d8vac&dl=0,https:\/\/www.dropbox.com\/scl\/fi\/mv5k3wvf5pvplm4369e79\/WhatsApp-Image-2025-03-04-at-14.07.53.jpeg?rlkey=7c84zjs22r201nve08pfuu6qo&st=nqyh8u1f&dl=0,https:\/\/www.dropbox.com\/scl\/fi\/whz2z3m41zj94uij9e6bh\/WhatsApp-Image-2025-03-04-at-14.07.52.jpeg?rlkey=c4py1chijf8s0cf4f6uc0u9mj&st=01jeh78y&dl=0,https:\/\/www.dropbox.com\/scl\/fi\/ntiypibwfnzlk672beqq4\/WhatsApp-Image-2025-02-15-at-09.53.38.jpeg?rlkey=slol7s1gu60ukv9ycryjmt4q7&st=whhfnm8b&dl=0,https:\/\/www.dropbox.com\/scl\/fi\/viyjgg92v4gttjt3miv6t\/WhatsApp-Image-2025-02-15-at-09.53.37.jpeg?rlkey=rsoi5y6m022xkldlamywzyxsp&st=v1fn343v&dl=0",
+     "fotoPerfil": "https:\/\/www.dropbox.com\/s\/b8bt212zam18xdm\/WhatsApp%20Image%202025-02-15%20at%2009.53.38%20(1).jpeg?st=jfsfzf5w&dl=0",
+     "todasFotos": "https:\/\/www.dropbox.com\/s\/4doxqrrs18s8b2d\/WhatsApp%20Image%202025-03-04%20at%2014.03.51%20(1).jpeg?st=ae2wxnbx&dl=0,https:\/\/www.dropbox.com\/scl\/fi\/k396z6009kpqjry1pj4lm\/WhatsApp-Image-2025-03-04-at-14.03.51.jpeg?rlkey=guwhoi91y7u1o8mficypnet7y&st=m27h38mw&dl=0,https:\/\/www.dropbox.com\/scl\/fi\/t8ik0r70e6ju9wplmjffx\/WhatsApp-Image-2025-03-04-at-14.10.20.jpeg?rlkey=04m4azs8zrgrr63jjaauu7xce&st=dev9tbae&dl=0,https:\/\/www.dropbox.com\/scl\/fi\/h1axgevh5atdjwglr5xnf\/WhatsApp-Image-2025-03-04-at-14.10.21.jpeg?rlkey=cjs1l45lxokf1igwjvmep1q57&st=5vl6y4ff&dl=0https:\/\/www.dropbox.com\/s\/4doxqrrs18s8b2d\/WhatsApp%20Image%202025-03-04%20at%2014.03.51%20(1).jpeg?st=ae2wxnbx&dl=0,https:\/\/www.dropbox.com\/scl\/fi\/k396z6009kpqjry1pj4lm\/WhatsApp-Image-2025-03-04-at-14.03.51.jpeg?rlkey=guwhoi91y7u1o8mficypnet7y&st=m27h38mw&dl=0,https:\/\/www.dropbox.com\/scl\/fi\/t8ik0r70e6ju9wplmjffx\/WhatsApp-Image-2025-03-04-at-14.10.20.jpeg?rlkey=04m4azs8zrgrr63jjaauu7xce&st=dev9tbae&dl=0,https:\/\/www.dropbox.com\/scl\/fi\/h1axgevh5atdjwglr5xnf\/WhatsApp-Image-2025-03-04-at-14.10.21.jpeg?rlkey=cjs1l45lxokf1igwjvmep1q57&st=5vl6y4ff&dl=0,https:\/\/www.dropbox.com\/s\/b8bt212zam18xdm\/WhatsApp%20Image%202025-02-15%20at%2009.53.38%20(1).jpeg?st=7slqcpi6&dl=0,https:\/\/www.dropbox.com\/scl\/fi\/ntiypibwfnzlk672beqq4\/WhatsApp-Image-2025-02-15-at-09.53.38.jpeg?rlkey=slol7s1gu60ukv9ycryjmt4q7&st=th10xfaa&dl=0,https:\/\/www.dropbox.com\/scl\/fi\/whz2z3m41zj94uij9e6bh\/WhatsApp-Image-2025-03-04-at-14.07.52.jpeg?rlkey=c4py1chijf8s0cf4f6uc0u9mj&st=og05mcrz&dl=0,https:\/\/www.dropbox.com\/scl\/fi\/mv5k3wvf5pvplm4369e79\/WhatsApp-Image-2025-03-04-at-14.07.53.jpeg?rlkey=7c84zjs22r201nve08pfuu6qo&st=99yevxv6&dl=0",
      "categoria": "Transporte"
     },
     {
      "id": 6,
      "nombre": "hiunday County 23 puestos",
      "descripcion": "22 puesto + 1 opcional,transporte 24 horas, radio bluetooth, baul espacioso, de gran espacio,sillas reclinables, aire acondicionado, vehiculo luxury",
-     "fotoPerfil": "https:\/\/www.dropbox.com\/scl\/fi\/lrk4maq2arx7u18qni99j\/WhatsApp-Image-2025-03-04-at-14.06.06.jpeg?rlkey=1repxr155lbhkfy36g50ptpwv&st=l0plrtdb&dl=0",
-     "todasFotos": "https:\/\/www.dropbox.com\/scl\/fi\/lrk4maq2arx7u18qni99j\/WhatsApp-Image-2025-03-04-at-14.06.06.jpeg?rlkey=1repxr155lbhkfy36g50ptpwv&st=l0plrtdb&dl=0,https:\/\/www.dropbox.com\/scl\/fi\/uhdmmltislr4o85c2a2a4\/WhatsApp-Image-2025-03-04-at-14.06.06-1.jpeg?rlkey=xq7nvtkemkgmfc3m2mdp2hfp8&st=7hg1nts0&dl=0",
+     "fotoPerfil": "https:\/\/www.dropbox.com\/s\/maneu90srnazieo\/WhatsApp%20Image%202025-03-04%20at%2014.06.06.jpeg?st=e36l9p4t&dl=0",
+     "todasFotos": "https:\/\/www.dropbox.com\/s\/maneu90srnazieo\/WhatsApp%20Image%202025-03-04%20at%2014.06.06.jpeg?st=5sfzeo2d&dl=0,https:\/\/www.dropbox.com\/scl\/fi\/uhdmmltislr4o85c2a2a4\/WhatsApp-Image-2025-03-04-at-14.06.06-1.jpeg?rlkey=xq7nvtkemkgmfc3m2mdp2hfp8&st=esinooqu&dl=0",
      "categoria": "Transporte"
     },
     {
@@ -126,8 +166,8 @@
      "id": 3,
      "nombre": "Renault Master 16 puestos",
      "descripcion": "15 puesto + 1 opcional,transporte 24 horas, radio bluetooth, baul espacioso, de gran espacio,sillas reclinables, aire acondicionado",
-     "fotoPerfil": "https:\/\/www.dropbox.com\/scl\/fi\/w2o3uv41ygtqfhlgtz79c\/WhatsApp-Image-2025-03-04-at-14.33.49.jpeg?rlkey=wdw9ihnkjsshmw4l2jgfz5fjp&st=r4tzmx26&dl=0",
-     "todasFotos": "https:\/\/www.dropbox.com\/scl\/fi\/w2o3uv41ygtqfhlgtz79c\/WhatsApp-Image-2025-03-04-at-14.33.49.jpeg?rlkey=wdw9ihnkjsshmw4l2jgfz5fjp&st=r4tzmx26&dl=0,https:\/\/www.dropbox.com\/scl\/fi\/oc3nqc1pjjc5paldxcfuf\/WhatsApp-Image-2025-03-04-at-14.33.49-1.jpeg?rlkey=fjxl1vfdyfmwmobkzx28q79vj&st=7ow8dzo3&dl=0,https:\/\/www.dropbox.com\/scl\/fi\/9u55hp5qlam1gojp7vj7h\/WhatsApp-Image-2025-03-04-at-14.35.20.jpeg?rlkey=c9olx8eiy9fiy0k04yckdk2g8&st=g3x61d1s&dl=0",
+     "fotoPerfil": "https:\/\/www.dropbox.com\/s\/vjoy7bsqwpy6z07\/WhatsApp%20Image%202025-03-04%20at%2014.33.49.jpeg?st=vhc95568&dl=0",
+     "todasFotos": "https:\/\/www.dropbox.com\/scl\/fi\/b5brcca5cic2mumwdxxu6\/WhatsApp-Image-2025-03-04-at-14.33.49-1.jpeg?rlkey=9ofar0mf89ye8i40d2c03po3n&st=a7ugruri&dl=0,https:\/\/www.dropbox.com\/s\/vjoy7bsqwpy6z07\/WhatsApp%20Image%202025-03-04%20at%2014.33.49.jpeg?st=d8kh91dm&dl=0,https:\/\/www.dropbox.com\/scl\/fi\/9u55hp5qlam1gojp7vj7h\/WhatsApp-Image-2025-03-04-at-14.35.20.jpeg?rlkey=c9olx8eiy9fiy0k04yckdk2g8&st=k119kn6d&dl=0",
      "categoria": "Transporte"
     },
     {
@@ -160,7 +200,7 @@
      "descripcion": "• 2 habitaciones .capacidad para 6 personas .⁠vista al mar .⁠aire acondicionado. ⁠cocina .⁠zona de lavado con torre de secado",
      "fotoPerfil": "https:\/\/www.dropbox.com\/s\/5cm7ys79m6ke5j5\/WhatsApp%20Image%202025-03-04%20at%2015.31.15%20(2).jpeg?st=ttxqwx6e&dl=0",
      "todasFotos": "https:\/\/www.dropbox.com\/scl\/fi\/19lw3gfk53t06n1strbby\/WhatsApp-Image-2025-03-04-at-15.31.14.jpeg?rlkey=7f3od22pcb00u1d1wvq9ubtw4&st=za78vmhp&dl=0,https:\/\/www.dropbox.com\/scl\/fi\/tpu7m1dfcxqhlwjp0vu00\/WhatsApp-Image-2025-03-04-at-15.31.15-1.jpeg?rlkey=qbnp65nq8chtij59xjsyulkob&st=5sagi2rq&dl=0,https:\/\/www.dropbox.com\/scl\/fi\/wodvtra1r9ac7sk4alrtn\/WhatsApp-Image-2025-03-04-at-15.31.15-2.jpeg?rlkey=gb8u6v3usurxxeaikv98s3zru&st=rg6brwaz&dl=0,https:\/\/www.dropbox.com\/scl\/fi\/27qv2zn1axe8trm2q1ezh\/WhatsApp-Image-2025-03-04-at-15.31.15.jpeg?rlkey=m7pcur25isl8we21grh7qe6n5&st=qx1ztr1g&dl=0,https:\/\/www.dropbox.com\/s\/dyqixvq3izy1y3i\/WhatsApp%20Image%202025-03-04%20at%2015.31.16%20(1).jpeg?st=6j1mwckl&dl=0,https:\/\/www.dropbox.com\/scl\/fi\/uyo3xsqrsl0pk2zc0mtk9\/WhatsApp-Image-2025-03-04-at-15.31.16-2.jpeg?rlkey=sd8fce45sltg4x1ip9ey5pua5&st=ty2w5g6c&dl=0,https:\/\/www.dropbox.com\/scl\/fi\/exlqb94jzwayl7ga1xhc0\/WhatsApp-Image-2025-03-04-at-15.31.16-3.jpeg?rlkey=3kdo7cfumw62nd9g086chcxnq&st=m6rjlziq&dl=0,https:\/\/www.dropbox.com\/scl\/fi\/0cn0qwr6tpeoi4b9hx5r7\/WhatsApp-Image-2025-03-04-at-15.31.16.jpeg?rlkey=vrzepb27vtky7235j8cx4zdbu&st=39ij3bft&dl=0,https:\/\/www.dropbox.com\/scl\/fi\/59fqlb5pi9bqpk8bkn5zp\/WhatsApp-Image-2025-03-04-at-15.31.17-1.jpeg?rlkey=ggxd5cr2un9qegccal9q7qur1&st=qvvn923q&dl=0,https:\/\/www.dropbox.com\/scl\/fi\/rksf5u1r723ziwzh5b4et\/WhatsApp-Image-2025-03-04-at-15.31.17-2.jpeg?rlkey=2n2fy1pdvayhodiem87opw40r&st=5aa0pvfq&dl=0,https:\/\/www.dropbox.com\/scl\/fi\/3ctgfiw4k7301acrclhco\/WhatsApp-Image-2025-03-04-at-15.34.32-5.jpeg?rlkey=u2qyqv8zm6lc8zusidbftdz7w&st=7f1xuqhx&dl=0,https:\/\/www.dropbox.com\/scl\/fi\/rkexdfdiqp7oojfoen1ge\/WhatsApp-Image-2025-03-04-at-15.31.14.jpeg?rlkey=p3cujh8nvgci6cbfqim59uiys&st=megiyvit&dl=0,https:\/\/www.dropbox.com\/s\/5cm7ys79m6ke5j5\/WhatsApp%20Image%202025-03-04%20at%2015.31.15%20(2).jpeg?st=68cpk9bd&dl=0,https:\/\/www.dropbox.com\/scl\/fi\/f561ka5ps7j9f9or5f8z6\/WhatsApp-Image-2025-03-04-at-15.31.15.jpeg?rlkey=madvcddh3x6onfqrgnpbx8aje&st=jzw3diuk&dl=0,https:\/\/www.dropbox.com\/scl\/fi\/ocrvntnb96lk5dgn2vcw7\/WhatsApp-Image-2025-03-04-at-15.31.16-1.jpeg?rlkey=hig68judfgeragbv71cx5kwrj&st=27wj1bon&dl=0,https:\/\/www.dropbox.com\/scl\/fi\/duqrlorvu3sc40wlliwfw\/WhatsApp-Image-2025-03-04-at-15.31.16-2.jpeg?rlkey=u40i5d4ge2ps89jwbzar67ovh&st=vdwgwkwn&dl=0,https:\/\/www.dropbox.com\/scl\/fi\/duqrlorvu3sc40wlliwfw\/WhatsApp-Image-2025-03-04-at-15.31.16-2.jpeg?rlkey=u40i5d4ge2ps89jwbzar67ovh&st=vdwgwkwn&dl=0,https:\/\/www.dropbox.com\/scl\/fi\/10rlsild0ik2qragu7lk0\/WhatsApp-Image-2025-03-04-at-15.31.16-4.jpeg?rlkey=74nidz540338cao8dx84svqew&st=sx6eqz34&dl=0,https:\/\/www.dropbox.com\/scl\/fi\/10rlsild0ik2qragu7lk0\/WhatsApp-Image-2025-03-04-at-15.31.16-4.jpeg?rlkey=74nidz540338cao8dx84svqew&st=sx6eqz34&dl=0,https:\/\/www.dropbox.com\/scl\/fi\/vsf4abt3j9qv33tnt4irw\/WhatsApp-Image-2025-03-04-at-15.31.17-1.jpeg?rlkey=jfrpfjwv9deskghsd6pwf1spr&st=p2sq2k9v&dl=0,https:\/\/www.dropbox.com\/scl\/fi\/fowd4fmnhodvbnl8iqfo0\/WhatsApp-Image-2025-03-04-at-15.31.17.jpeg?rlkey=o9a8wmbtqe39qz0kqsupu665l&st=b2q9rf4d&dl=0",
-     "categoria": "Apartamentos con vista al mar"
+     "categoria": "Apartamentos"
     },
     {
      "id": 18,
@@ -203,121 +243,87 @@
      "categoria": "Botes Rapidos"
     }
    ],
-   "categoria":[
-    {
-     "id": 1,
-     "categoria": "Toures"
-    },
-    {
-     "id": 2,
-     "categoria": "Catamaran"
-    },
-    {
-     "id": 3,
-     "categoria": "Botes Deportivos"
-    },
-    {
-     "id": 4,
-     "categoria": "Yates"
-    },
-    {
-     "id": 5,
-     "categoria": "Casas"
-    },
-    {
-     "id": 6,
-     "categoria": "Transporte"
-    },
-    {
-     "id": 7,
-     "categoria": "Pasa Dias"
-    },
-    {
-     "id": 8,
-     "categoria": "Apartamentos con vista al mar"
-    },
-    {
-     "id": 9,
-     "categoria": "Decoraciones"
-    }
-   ],
+
    "enjoyCartagena":[
-      {
-   "id": 1,
-   "idProduct": 9
-  },
-  {
-   "id": 2,
-   "idProduct": 2
-  },
-  {
-   "id": 3,
-   "idProduct": 18
-  },
-  {
-   "id": 4,
-   "idProduct": 15
-  },
-  {
-   "id": 5,
-   "idProduct": 17
-  }
-     ],
+     {
+  "id": 1,
+  "idProduct": 9
+ },
+ {
+  "id": 2,
+  "idProduct": 2
+ },
+ {
+  "id": 3,
+  "idProduct": 18
+ },
+ {
+  "id": 4,
+  "idProduct": 15
+ },
+ {
+  "id": 5,
+  "idProduct": 17
+ }
+    ],
+
    "favoriteTours":[
-    {
-     "id": 1,
-     "idProduct": 11
-    },
-    {
-     "id": 2,
-     "idProduct": 12
-    },
-    {
-     "id": 3,
-     "idProduct": 9
-    },
-    {
-     "id": 4,
-     "idProduct": 10
-    },
-    {
-     "id": 5,
-     "idProduct": 13
-    },
-    {
-     "id": 6,
-     "idProduct": 14
+     {
+      "id": 1,
+      "idProduct": 11
+     },
+     {
+      "id": 2,
+      "idProduct": 12
+     },
+     {
+      "id": 3,
+      "idProduct": 9
+     },
+     {
+      "id": 4,
+      "idProduct": 10
+     },
+     {
+      "id": 5,
+      "idProduct": 13
+     },
+     {
+      "id": 6,
+      "idProduct": 14
+     }
+    ],
+
+    "video":[
+     {
+      "url": "null"
+     }
+    ],
+
+    "redes":[
+     {
+      "id":1,
+      "url": "https://www.facebook.com/share/1BU7wKjaUE/?mibextid=wwXIfr",
+      "name": "facebook",
+      "image":"/redes/1.png"
+     },
+     {
+      "id":2,
+      "url": "https://www.instagram.com/barrettotransfer_ctg?igsh=MWVucGI4MmJ3bnhnZg%3D%3D&utm_source=qr",
+      "name": "instagram",
+      "image":"/redes/2.png"
+     },
+     {
+      "id":3,
+      "url": "https://w.app/barretotranfers",
+      "name": "whatsapp",
+      "image":"/redes/3.png"
+     },
+     {
+      "id":4,
+      "url": "https://www.tiktok.com/@barretto.transfer?_t=ZS-8u3NXRdYrpa&_r=1",
+      "name": "tiktok",
+      "image":"/redes/4.png"
+     }
+    ]
     }
-   ],
-   "video":[
-    {
-     "url": "null"
-    }
-   ],
-   "redes":[
-      {
-       "id":1,
-       "url": "https://www.facebook.com/share/1BU7wKjaUE/?mibextid=wwXIfr",
-       "name": "facebook",
-       "image":"/redes/1.png"
-      },
-      {
-       "id":2,
-       "url": "https://www.instagram.com/barrettotransfer_ctg?igsh=MWVucGI4MmJ3bnhnZg%3D%3D&utm_source=qr",
-       "name": "instagram",
-       "image":"/redes/2.png"
-      },
-      {
-       "id":3,
-       "url": "https://w.app/barretotranfers",
-       "name": "whatsapp",
-       "image":"/redes/3.png"
-      },
-      {
-       "id":4,
-       "url": "https://www.tiktok.com/@barretto.transfer?_t=ZS-8u3NXRdYrpa&_r=1",
-       "name": "tiktok",
-       "image":"/redes/4.png"
-      }
-     ]
-   }

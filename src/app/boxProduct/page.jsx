@@ -48,10 +48,10 @@ const BoxProductContent = () => {
 
   return (
     <div className="lg:pt-[10%] pt-[15%] px-6">
-      <h1 className="text-2xl font-bold text-center text-gray-900 dark:text-white">Caja de productos</h1>
-      <p className="text-lg text-gray-900 dark:text-gray-300 mt-2 text-center">
+      <h1 className="text-2xl font-bold text-center">Caja de productos</h1>
+      <p className="text-lg text-gray-700 mt-2 text-center">
         Mostrando productos de la categoría:{" "}
-        <span className="font-semibold text-gray-900 dark:text-white">{category}</span>
+        <span className="font-semibold text-cyan-600">{category}</span>
       </p>
 
       {loading ? (
@@ -61,10 +61,7 @@ const BoxProductContent = () => {
       ) : products.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-6">
           {products.map((card, index) => (
-            <div
-              key={index}
-              className="bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300"
-            >
+            <div key={index} className="bg-white shadow-lg rounded-lg overflow-hidden">
               <Image 
                 src={transformDropboxLink(card.fotoPerfil)} 
                 alt={card.nombre} 
@@ -74,9 +71,8 @@ const BoxProductContent = () => {
                 unoptimized
               />
               <div className="p-4 text-center">
-                {/* Título del producto con soporte para modo oscuro */}
-                <h2 className="text-lg font-bold text-gray-700 dark:text-white uppercase">{card.nombre}</h2>
-                <p className="text-gray-600 dark:text-gray-300 text-sm text-start lowercase">
+                <h2 className="text-lg font-bold">{card.nombre}</h2>
+                <p className="text-gray-600 text-sm text-start lowercase">
                   {truncateText(card.descripcion, 30)}
                 </p>
                 <Link href={`/singleProduct?idProducto=${card.id}`}>
@@ -97,7 +93,7 @@ const BoxProductContent = () => {
 
 const BoxProduct = () => {
   return (
-    <Suspense fallback={<p className="text-gray-600 dark:text-gray-300 mt-4">Cargando productos...</p>}>
+    <Suspense fallback={<p className="text-gray-600 mt-4">Cargando productos...</p>}>
       <BoxProductContent />
     </Suspense>
   );

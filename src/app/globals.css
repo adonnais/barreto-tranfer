@@ -34,18 +34,3 @@ body {
   animation: gradientMove 5s ease infinite;
 }
 
-@media (max-width: 768px) {
-    .scrollbar-hide::-webkit-scrollbar {
-        display: none;
-    }
-    .scrollbar-hide {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-    }
-}
-@font-face {
-  font-family: 'Segoe Script';
-  src: url('/segoesc.TTF') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}

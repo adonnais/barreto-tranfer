@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Barreto Transfer",
+  title: "barretto Transfer",
   description: "Tures y TRansporte",
 };
 

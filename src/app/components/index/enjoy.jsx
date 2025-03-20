@@ -52,14 +52,14 @@ const Enjoy = ({ items }) => {
         <div className="relative z-10 text-center space-y-5">
         <h1 className="text-white text-3xl font-bold font-[Segoe Script]">
           Descubre la comodidad y seguridad de viajar con{" "}
-          <span className="text-yellow-300">Barretto Transfer</span>.  
+          <span className="text-yellow-300 z-10">Barretto Transfer</span>.  
           Disfruta de nuestros vehículos para tus excursiones y recorridos, dentro y fuera de la ciudad.  
           ¡Viaja con confianza, confort y el mejor servicio! 🚐✨
         </h1>
 
 
           <Link href="/boxProduct?category=Transporte">
-            <p className="p-3 text-lg rounded-full bg-yellow-400 text-blue-600 hover:bg-white hover:text-yellow-400 hover:font-bold shadow-lg transition-all duration-300 dark:bg-yellow-500 dark:text-gray-900 dark:hover:bg-white dark:hover:text-yellow-600 animate-bounce cursor-pointer mt-5 font-segoe">
+            <p className="p-3 text-lg rounded-full z-10 bg-yellow-400 text-blue-600 hover:bg-white hover:text-yellow-400 hover:font-bold shadow-lg transition-all duration-300 dark:bg-yellow-500 dark:text-gray-900 dark:hover:bg-white dark:hover:text-yellow-600 animate-bounce cursor-pointer mt-5 font-segoe">
               Solo da click aquí
             </p>
           </Link>

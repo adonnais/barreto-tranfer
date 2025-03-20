@@ -91,59 +91,23 @@ const Navbar = () => {
       </nav>
 
       {/* Modal de menú móvil */}
-      <AnimatePresence>
-        {isModalOpen && (
-          <motion.div
-            className={`fixed inset-0 bg-opacity-50 flex justify-center items-start pt-14 ${isDarkMode ? "bg-black/80" : "bg-black/50"}`}
-            initial={{ y: "-100%" }}
-            animate={{ y: 0 }}
-            exit={{ y: "-100%" }}
-            transition={{ type: "spring", stiffness: 300, damping: 30 }}
-          >
-            <div className={`w-full p-5 rounded-t-lg relative ${isDarkMode ? "bg-gray-900 text-white" : "bg-white text-black"}`}>
-              {/* Barra de búsqueda en modal */}
-              <form onSubmit={handleSearch} className="w-full">
-                <div className="relative">
-                  <input
-                    type="text"
-                    placeholder="Buscar..."
-                    value={query}
-                    onChange={(e) => setQuery(e.target.value)}
-                    className={`w-full px-4 py-2 border rounded-full shadow-sm focus:ring-2 focus:outline-none ${
-                      isDarkMode ? "bg-gray-800 text-white border-gray-600" : "border-gray-300"
-                    }`}
-                  />
-                  <button type="submit" className="absolute inset-y-0 right-3 flex items-center text-gray-500 hover:text-blue-600">
-                    🔍
-                  </button>
-                </div>
-              </form>
+      {/* Modal de menú móvil */}
+<AnimatePresence>
+  {isModalOpen && (
+    <motion.div
+      className={`fixed inset-0 bg-opacity-50 flex justify-center items-start pt-14 z-60 ${isDarkMode ? "bg-black/80" : "bg-black/50"}`}
+      initial={{ y: "-100%" }}
+      animate={{ y: 0 }}
+      exit={{ y: "-100%" }}
+      transition={{ type: "spring", stiffness: 300, damping: 30 }}
+    >
+      <div className={`w-full p-5 rounded-t-lg relative z-60 ${isDarkMode ? "bg-gray-900 text-white" : "bg-white text-black"}`}>
+        {/* Contenido de la modal */}
+      </div>
+    </motion.div>
+  )}
+</AnimatePresence>
 
-              <div className="h-[1px] my-2 bg-black"></div>
-
-              {/* Lista de categorías en el modal */}
-              <div className="flex flex-col space-y-2">
-                {menuItems.map((item) => (
-                  <Link
-                    key={item.id}
-                    href={`/boxProduct?category=${encodeURIComponent(item.categoria)}`}
-                    className="text-md font-light "
-                    aria-label={`Ir a ${item.categoria}`}
-                    onClick={() => setIsModalOpen(false)}
-                  >
-                    {item.categoria}
-                  </Link>
-                ))}
-              </div>
-
-              {/* Botón de cerrar */}
-              <button className="absolute top-3 right-3 p-2 rounded" onClick={toggleModal}>
-                ✖
-              </button>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </>
   );
 };

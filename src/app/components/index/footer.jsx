@@ -32,9 +32,7 @@ const Footer = () => {
         {/* Copyright */}
         <p className="mt-6 text-gray-500 text-sm text-center">
           &copy; 2025 Todos los derechos reservados. 
-          <a href="https://wa.me/qr/IYEDTAGSPBSLG1" className="font-bold text-cyan-100 hover:text-cyan-300 transition">
-            Adonais Medrano
-          </a>
+          
         </p>
       </div>
     </footer>

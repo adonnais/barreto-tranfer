@@ -1,25 +1,24 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import Link from "next/link";
 
-const fetchProductos = async () => {
-  const response = await fetch("/barreto-tranfer.json");
-  if (!response.ok) throw new Error("Error al cargar productos");
-  return response.json();
-};
-
-const Resultados = () => {
+const ResultadosContent = () => {
   const searchParams = useSearchParams();
   const query = searchParams.get("query")?.toLowerCase() || "";
   const [productos, setProductos] = useState([]);
   const [filteredProductos, setFilteredProductos] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    const getProductos = async () => {
+    const fetchProductos = async () => {
       try {
-        const data = await fetchProductos();
+        const response = await fetch("/barreto-tranfer.json");
+        if (!response.ok) throw new Error("Error al cargar productos");
+        const data = await response.json();
+
         setProductos(data.productos);
 
         const filtered = data.productos.filter(
@@ -29,13 +28,18 @@ const Resultados = () => {
         );
 
         setFilteredProductos(filtered);
-      } catch (error) {
-        console.error("Error obteniendo productos:", error);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
       }
     };
 
-    getProductos();
+    fetchProductos();
   }, [query]);
+
+  if (loading) return <p className="text-gray-600 mt-4">Cargando productos...</p>;
+  if (error) return <p className="text-red-600 mt-4">Error: {error}</p>;
 
   return (
     <div className="pt-[10%] px-6 lg:px-14">
@@ -47,7 +51,7 @@ const Resultados = () => {
       {filteredProductos.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
           {filteredProductos.map((producto) => (
-            <Link key={producto.id} href={`/producto?idProducto=${producto.id}`}>
+            <Link key={producto.id} href={`/producto?idProducto=${producto.id}`} className="block">
               <div className="border rounded-lg shadow-md p-4 hover:shadow-lg transition">
                 <img
                   src={producto.fotoPerfil}
@@ -64,6 +68,14 @@ const Resultados = () => {
         <p className="text-gray-500 mt-4">No se encontraron productos.</p>
       )}
     </div>
+  );
+};
+
+const Resultados = () => {
+  return (
+    <Suspense fallback={<p className="text-gray-600 mt-4">Cargando búsqueda...</p>}>
+      <ResultadosContent />
+    </Suspense>
   );
 };
 

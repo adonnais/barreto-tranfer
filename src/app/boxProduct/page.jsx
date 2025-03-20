@@ -22,9 +22,14 @@ const BoxProductContent = () => {
         console.log("Datos a buscar:", jsonData.productos, "Categoría:", category);
 
         const filteredProducts =
-          category === "All" ? jsonData.productos : jsonData.productos.filter((p) => p.categoria === category);
-          
-        setProducts(filteredProducts);
+          category === "All"
+            ? jsonData.productos
+            : jsonData.productos.filter((p) => p.categoria === category);
+
+        // Ordenar por 'order' antes de actualizar el estado
+        const sortedProducts = filteredProducts.sort((a, b) => a.order - b.order);
+
+        setProducts(sortedProducts);
       } catch (error) {
         console.error("Hubo un problema con la petición Fetch:", error);
       } finally {
@@ -60,9 +65,9 @@ const BoxProductContent = () => {
         </div>
       ) : products.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-6">
-          {products.map((card, index) => (
+          {products.map((card) => (
             <div
-              key={index}
+              key={card.id}
               className="bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300"
             >
               <Image 
@@ -74,7 +79,6 @@ const BoxProductContent = () => {
                 unoptimized
               />
               <div className="p-4 text-center">
-                {/* Título del producto con soporte para modo oscuro */}
                 <h2 className="text-lg font-bold text-gray-700 dark:text-white uppercase">{card.nombre}</h2>
                 <p className="text-gray-600 dark:text-gray-300 text-sm text-start lowercase">
                   {truncateText(card.descripcion, 30)}

@@ -1,30 +1,30 @@
 {
-   "covers":[
-    {
-     "id": "  c   ",
-     "foto": "https:\/\/www.dropbox.com\/scl\/fi\/xgb7s0dw3z4vdn84gnnx8\/Mesa-de-trabajo-1-100.webp?rlkey=8p3k326u9e6drnifmhentez06&st=suoas70n&dl=0"
-    },
-    {
-     "id": 2,
-     "foto": "https:\/\/www.dropbox.com\/scl\/fi\/vx6k6o2w2kigzm4m9rh1k\/Recurso-4-100.webp?rlkey=dxabytgdu4rk4x2uzin215nno&st=5dxvqzaa&dl=0"
-    },
-    {
-     "id": 3,
-     "foto": "https:\/\/www.dropbox.com\/scl\/fi\/wgisj80429ff8mkmjygo5\/Mesa-de-trabajo-3-100.webp?rlkey=6fmureayuoy6w8p2uwltnwigh&st=qq1g1sz7&dl=0"
-    },
-    {
-     "id": 4,
-     "foto": "https:\/\/www.dropbox.com\/scl\/fi\/qieq5wowutjzzeullm3ia\/Mesa-de-trabajo-4-100.webp?rlkey=bpgvoupmxb5fgl67yhl86e2sg&st=ifi2eh2b&dl=0"
-    },
-    {
-     "id": 5,
-     "foto": "https:\/\/www.dropbox.com\/scl\/fi\/u79l2xk5g9ttlaoqrnrgc\/Mesa-de-trabajo-5-100.webp?rlkey=u3m4mnuye2rj4srg2ffeya494&st=1snwp5ek&dl=0"
-    },
-    {
-     "id": 6,
-     "foto": "https:\/\/www.dropbox.com\/scl\/fi\/ujkns33f2ai4rp44838dg\/Mesa-de-trabajo-6-100.webp?rlkey=q1aac18ucaxnaopbgjqs1uine&st=bmpmgx0e&dl=0"
-    }
-   ],
+   "covers": [
+  {
+    "id": 1,
+    "foto": "/PNG/1.jpg"
+  },
+  {
+    "id": 2,
+    "foto": "/PNG/2.jpg"
+  },
+  {
+    "id": 3,
+    "foto": "/PNG/3.jpg"
+  },
+  {
+    "id": 4,
+    "foto": "/PNG/4.jpg"
+  },
+  {
+    "id": 5,
+    "foto": "/PNG/5.jpg"
+  },
+  {
+    "id": 6,
+    "foto": "/PNG/6.jpg"
+  }
+],
    "productos":[
     {
      "id": 16,
@@ -340,7 +340,7 @@
     },
     {
      "id": 3,
-     "url": "https:\/\/w.app\/barretotranfers",
+     "url": "http://www.wa.me/573005121339",
      "name": "whatsapp",
      "image": "\/redes\/3.png"
     },

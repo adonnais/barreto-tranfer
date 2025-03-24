@@ -38,7 +38,7 @@ const Enjoy = ({ items }) => {
       {/* Sección: Descubre en Cartagena */}
       <div className="relative w-full sm:px-6 border-b-2 mt-2 mx-auto">
         <h1 className="text-md font-bold text-cyan-800 dark:text-cyan-400 uppercase text-start p-2">
-          Descubre en Cartagena
+        ¿Que hacer en cartagena?
         </h1>
         <div className="mx-auto justify-items-start w-full">
           <GalleryEnjoy cards={productsInEnjoy} />

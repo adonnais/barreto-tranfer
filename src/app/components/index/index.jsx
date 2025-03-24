@@ -42,9 +42,12 @@ export default function Index() {
   return (
     <div className="space-y-5 lg:pt-[16px] pt-[14px]">
       <Cover items={items} />
+      <Footer />
       <Enjoy items={items} />
       <Feedback items={items} />
-      <Footer />
+      <footer className="bg-gray-900 text-white text-center py-4 w-full">
+      <p className="text-sm">&copy; 2025 Barretto Transfer. Todos los derechos reservados.</p>
+    </footer>
     </div>
   );
 }

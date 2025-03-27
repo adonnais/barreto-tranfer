@@ -24,6 +24,15 @@ const transformDropboxLink = (url) => {
   return url.replace("www.dropbox.com", "dl.dropboxusercontent.com");
 };
 
+// Función para capitalizar oraciones
+const capitalizeSentences = (text) => {
+  return text
+    .toLowerCase()
+    .split(". ")
+    .map(sentence => sentence.charAt(0).toUpperCase() + sentence.slice(1))
+    .join(". ");
+};
+
 const SingleProductContent = () => {
   const searchParams = useSearchParams();
   const idProducto = searchParams.get("idProducto")?.trim() || null;
@@ -48,7 +57,7 @@ const SingleProductContent = () => {
         setMainImage(transformDropboxLink(foundProduct.fotoPerfil));
 
         if (foundProduct.todasFotos) {
-          console.log("Cargando imágenes desde la cadena:", foundProduct.todasFotos);
+         // console.log("Cargando imágenes desde la cadena:", foundProduct.todasFotos);
 
           const imagesArray = foundProduct.todasFotos
             .split(",")
@@ -65,7 +74,7 @@ const SingleProductContent = () => {
 
   const formatDescription = (text) => {
     if (!text) return "";
-    return text.split(". ").map((sentence, index) => (
+    return capitalizeSentences(text).split(". ").map((sentence, index) => (
       <p key={index} className="text-gray-600 dark:text-gray-400 mt-2">{sentence}.</p>
     ));
   };
@@ -88,7 +97,6 @@ const SingleProductContent = () => {
           <h2 className="text-xl font-semibold text-gray-900 dark:text-white">{product.nombre}</h2>
 
           <div className="flex flex-col md:flex-col lg:flex-row gap-6 mt-4">
-            {/* Sección de imágenes */}
             <div className="w-full lg:w-1/2 flex flex-col items-center">
               {mainImage ? (
                 <Image
@@ -105,7 +113,6 @@ const SingleProductContent = () => {
                 </div>
               )}
 
-              {/* Galería de imágenes adicionales */}
               <div className="relative w-full">
                 <div className="flex gap-2 mt-4 overflow-x-scroll overflow-x-hidden p-2">
                   {galleryImages.length > 0 ? (
@@ -133,26 +140,12 @@ const SingleProductContent = () => {
                 </div>
               </div>
             </div>
-
-            {/* Sección de descripción y botón de WhatsApp */}
             <div className="w-full lg:w-1/2">
               {formatDescription(product.descripcion)}
-
               <button
                 onClick={handleWhatsApp}
                 className="mt-6 px-6 py-3 bg-green-500 text-white text-lg font-semibold rounded-full flex items-center gap-3 shadow-lg hover:bg-green-600 dark:hover:bg-green-400 transition-all duration-300 transform hover:scale-105"
               >
-                <svg xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 448 512"
-                  width="20"
-                  height="20"
-                  fill="white">
-                  <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 
-                  480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157
-                  341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 
-                  82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 
-                  184.6z"/>
-                </svg>
                 Consultar por WhatsApp
               </button>
             </div>

@@ -50,9 +50,9 @@ const Enjoy = ({ items }) => {
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-blue-700 to-blue-900 dark:from-gray-800 dark:via-gray-900 dark:to-black animate-gradient"></div>
 
         <div className="relative z-10 text-center space-y-5">
-        <h1 className="text-white text-3xl font-bold font-[Segoe Script]">
+        <h1 className="text-white text-3xl font-bold sogoe-font ">
           Descubre la comodidad y seguridad de viajar con{" "}
-          <span className="text-yellow-300 z-10">Barretto Transfer</span>.  
+          <span className="text-yellow-300 z-10  uppercase">Barretto Transfer</span>.  
           Disfruta de nuestros vehículos para tus excursiones y recorridos, dentro y fuera de la ciudad.  
           ¡Viaja con confianza, confort y el mejor servicio! 🚐✨
         </h1>

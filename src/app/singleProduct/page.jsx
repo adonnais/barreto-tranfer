@@ -1,11 +1,9 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 
-// Acceso al token de Dropbox
-const DROPBOX_ACCESS_TOKEN = process.env.NEXT_PUBLIC_DROPBOX_ACCESS_TOKEN;
-
+// Función para obtener el producto filtrado
 const fetchAndFilterProduct = async (idProducto) => {
   try {
     const response = await fetch("/barreto-tranfer.json");
@@ -20,12 +18,22 @@ const fetchAndFilterProduct = async (idProducto) => {
   }
 };
 
+// Transformar enlaces de Dropbox
 const transformDropboxLink = (url) => {
-  if (!url || typeof url !== "string") return "";
+  if (!url || typeof url !== "string" || url.trim() === "") return "/placeholder.jpg";
   return url.replace("www.dropbox.com", "dl.dropboxusercontent.com");
 };
 
-const SingleProduct = () => {
+// Función para capitalizar oraciones
+const capitalizeSentences = (text) => {
+  return text
+    .toLowerCase()
+    .split(". ")
+    .map(sentence => sentence.charAt(0).toUpperCase() + sentence.slice(1))
+    .join(". ");
+};
+
+const SingleProductContent = () => {
   const searchParams = useSearchParams();
   const idProducto = searchParams.get("idProducto")?.trim() || null;
 
@@ -49,9 +57,8 @@ const SingleProduct = () => {
         setMainImage(transformDropboxLink(foundProduct.fotoPerfil));
 
         if (foundProduct.todasFotos) {
-          console.log("Cargando imágenes desde la cadena:", foundProduct.todasFotos);
+         // console.log("Cargando imágenes desde la cadena:", foundProduct.todasFotos);
 
-          // Convertir la cadena separada por comas en un array de imágenes
           const imagesArray = foundProduct.todasFotos
             .split(",")
             .map((url) => transformDropboxLink(url.trim()));
@@ -67,8 +74,8 @@ const SingleProduct = () => {
 
   const formatDescription = (text) => {
     if (!text) return "";
-    return text.split(". ").map((sentence, index) => (
-      <p key={index} className="text-gray-600 mt-2">{sentence}.</p>
+    return capitalizeSentences(text).split(". ").map((sentence, index) => (
+      <p key={index} className="text-gray-600 dark:text-gray-400 mt-2">{sentence}.</p>
     ));
   };
 
@@ -81,16 +88,15 @@ const SingleProduct = () => {
 
   return (
     <div className="pt-[10%] px-6 lg:px-14">
-      <h1 className="text-2xl font-bold">Detalle del Producto</h1>
+      <h1 className="text-2xl font-bold dark:text-white">Detalle del Producto</h1>
 
       {loading ? (
-        <p className="text-gray-500 mt-2">Cargando...</p>
+        <p className="text-gray-500 dark:text-gray-400 mt-2">Cargando...</p>
       ) : product ? (
-        <div className="mt-4 p-4 border rounded-lg shadow-md">
-          <h2 className="text-xl font-semibold">{product.nombre}</h2>
+        <div className="mt-4 p-4 border rounded-lg shadow-md bg-white dark:bg-gray-900 dark:border-gray-700">
+          <h2 className="text-xl font-semibold text-gray-900 dark:text-white">{product.nombre}</h2>
 
           <div className="flex flex-col md:flex-col lg:flex-row gap-6 mt-4">
-            {/* Sección de imágenes */}
             <div className="w-full lg:w-1/2 flex flex-col items-center">
               {mainImage ? (
                 <Image
@@ -102,48 +108,45 @@ const SingleProduct = () => {
                   unoptimized
                 />
               ) : (
-                <div className="w-full h-60 bg-gray-200 flex items-center justify-center rounded-lg">
-                  <p className="text-gray-500">Imagen no disponible</p>
+                <div className="w-full h-60 bg-gray-200 dark:bg-gray-700 flex items-center justify-center rounded-lg">
+                  <p className="text-gray-500 dark:text-gray-400">Imagen no disponible</p>
                 </div>
               )}
 
-              {/* Galería de imágenes adicionales */}
-              {/* Galería de imágenes adicionales */}
-              <div className="flex gap-2 mt-4 overflow-x-auto whitespace-nowrap p-2">
-                {galleryImages.length > 0 ? (
-                  <div className="flex flex-nowrap">
-                    {galleryImages.map((foto, index) => (
-                      <button
-                        key={index}
-                        onClick={() => setMainImage(foto)}
-                        className="border-2 border-transparent hover:border-blue-500 p-1 rounded-lg transition"
-                      >
-                        <Image
-                          src={foto}
-                          width={100}
-                          height={100}
-                          alt={`Vista ${index + 1}`}
-                          className="rounded-md object-cover w-24 h-24"
-                          unoptimized
-                        />
-                      </button>
-                    ))}
-                  </div>
-                ) : (
-                  <p className="text-gray-500">No hay imágenes adicionales</p>
-                )}
+              <div className="relative w-full">
+                <div className="flex gap-2 mt-4 overflow-x-scroll overflow-x-hidden p-2">
+                  {galleryImages.length > 0 ? (
+                    <div className="flex flex-nowrap">
+                      {galleryImages.map((foto, index) => (
+                        <button
+                          key={index}
+                          onClick={() => setMainImage(foto)}
+                          className="border-2 border-transparent hover:border-blue-500 p-1 rounded-lg transition flex-none"
+                        >
+                          <Image
+                            src={foto}
+                            width={150}
+                            height={150}
+                            alt={`Vista ${index + 1}`}
+                            className="rounded-md object-cover w-[100px] h-[100px] flex-none"
+                            unoptimized
+                          />
+                        </button>
+                      ))}
+                    </div>
+                  ) : (
+                    <p className="text-gray-500 dark:text-gray-400">No hay imágenes adicionales</p>
+                  )}
+                </div>
               </div>
-
             </div>
-
-            {/* Sección de descripción y botón de WhatsApp */}
             <div className="w-full lg:w-1/2">
               {formatDescription(product.descripcion)}
               <button
                 onClick={handleWhatsApp}
-                className="mt-4 px-4 py-2 bg-green-500 text-white text-sm rounded-lg hover:bg-green-600 transition flex items-center gap-2"
+                className="mt-6 px-6 py-3 bg-green-500 text-white text-lg font-semibold rounded-full flex items-center gap-3 shadow-lg hover:bg-green-600 dark:hover:bg-green-400 transition-all duration-300 transform hover:scale-105"
               >
-                📲 Consultar por WhatsApp
+                Consultar por WhatsApp
               </button>
             </div>
           </div>
@@ -152,6 +155,14 @@ const SingleProduct = () => {
         <p className="text-red-500 mt-2">Producto no encontrado.</p>
       )}
     </div>
+  );
+};
+
+const SingleProduct = () => {
+  return (
+    <Suspense fallback={<p className="text-gray-600 dark:text-gray-400 mt-4">Cargando producto...</p>}>
+      <SingleProductContent />
+    </Suspense>
   );
 };
 

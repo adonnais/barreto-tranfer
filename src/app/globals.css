@@ -23,3 +23,34 @@ body {
 .bg-nv{
   background-color: rgba(255, 255, 255, 0.5);
 }
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradientMove 5s ease infinite;
+}
+
+@media (max-width: 768px) {
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+    }
+    .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+}
+@font-face {
+  font-family: 'Segoe Script';
+  src: url('/segoesc.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.sogoe-font{
+  font-family: "Segoe Script", sans-serif;
+}
+

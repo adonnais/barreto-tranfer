@@ -17,11 +17,10 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto px-6 w-full flex flex-col md:flex-row justify-between items-center gap-8">
         
         {/* Sección de Información */}
-        <div className="md:w-2/3 text-center md:text-left">
-          <h2 className="text-3xl font-extrabold mb-4 text-blue-400">Quiénes Somos</h2>
+        <div className=" text-center md:text-left">
+          <h2 className="text-3xl font-extrabold mb-4 text-blue-400 uppercase">Quiénes Somos</h2>
           <p className="text-gray-300 leading-relaxed text-lg">
-            En <span className="text-blue-400 font-semibold">Barretto Transfer</span>, nos especializamos en convertir tus vacaciones en una aventura inolvidable.
-            Te ofrecemos confort, seguridad y un servicio excepcional para que disfrutes cada instante sin preocupaciones.
+            Somos una empresa que facilita tus necesidades en tus vacaciones en Cartagena. Brindándote la mejor experiencia, confort y confianza en cada paso que das con nosotros..
           </p>
         </div>
       </div>

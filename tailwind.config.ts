@@ -14,6 +14,7 @@ export default {
       },
       fontFamily: {
         mifont: ["segoesc", "sans-serif"],
+        sans: ["Roboto", "sans-serif"],
       },
     },
   },

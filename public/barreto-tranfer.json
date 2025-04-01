@@ -252,10 +252,22 @@
     "order": "null"
    },
    {
-    "id": 26
+    "id": 26,
+    "nombre": "Tour o recorrido en Barranquilla",
+    "descripcion": "Incluye :.- Recogida en el hotel.- ⁠Transporte climatizado.- ⁠Ventana al mundo.- ⁠aleta del tiburón.- ⁠malecón del río.- ⁠monumento de Shakira.- ⁠Puente pumarejo.- ⁠museo del carnaval.- ⁠puerto colombia.- ⁠espacio para almuerzo.- ⁠regreso hotel",
+    "fotoPerfil": "https://www.dropbox.com/scl/fi/5ytgpn9xu18fclqhxv4fu/WhatsApp-Image-2025-03-31-at-11.25.28-3.jpeg?rlkey=lrf9giy14x4vbqzumjwuv0sfy&st=0fvsj699&dl=0",
+    "todasFotos": "https://www.dropbox.com/scl/fi/1r3pa97sso6kasq8hjt75/WhatsApp-Image-2025-03-31-at-11.25.28-2.jpeg?rlkey=kvtibqkiclergul4ynsbbicso&st=sij74x51&dl=0,https://www.dropbox.com/scl/fi/8ha9wpcobcpz0zjc5mrw5/WhatsApp-Image-2025-03-31-at-11.25.28.jpeg?rlkey=v6aumecerufepeio9172l6v40&st=ad2b3q0y&dl=0,https://www.dropbox.com/scl/fi/5ytgpn9xu18fclqhxv4fu/WhatsApp-Image-2025-03-31-at-11.25.28-3.jpeg?rlkey=lrf9giy14x4vbqzumjwuv0sfy&st=yb5749di&dl=0,https://www.dropbox.com/scl/fi/rg91j8blgsfvbav2jmn4b/WhatsApp-Image-2025-03-31-at-11.25.28-1.jpeg?rlkey=rf08s44atbbh0e0zjgszmvwey&st=28joo5eq&dl=0",
+    "categoria": "Toures",
+    "order": "null"
    },
    {
-    "id": 27
+    "id": 27.,
+    "nombre": "City tour Cartagena por persona",
+    "descripcion": "incluye :.-Recorrido por Getsemani y ciudad amurallada .-Recorrido por zona Bocagrande y Laguito.-Letras de Cartagena para foto 📸.-Bahia de Cartagena .-Castillo de San Felipe .-Cerro de la popa .-San Sebastián del pastelillo",
+    "fotoPerfil": "https://www.dropbox.com/scl/fi/saxge6d1go81twtclxog7/WhatsApp-Image-2025-03-31-at-11.33.15.jpeg?rlkey=gu7zqzkeuenwc1cck7xmddv7c&st=8uz84quh&dl=0",
+    "todasFotos": "https://www.dropbox.com/scl/fi/7cgdcupkwu5liebebitp0/WhatsApp-Image-2025-03-31-at-11.37.24.jpeg?rlkey=oruu7x2449np9z9xj8yvbfz2w&st=gfe5oxis&dl=0,https://www.dropbox.com/scl/fi/ujfdnlfstrbx48mwrpmds/WhatsApp-Image-2025-03-31-at-11.37.10.jpeg?rlkey=yyf62brufrzp8v8e2lfylrh4z&st=e14oaaov&dl=0,https://www.dropbox.com/scl/fi/saxge6d1go81twtclxog7/WhatsApp-Image-2025-03-31-at-11.33.15.jpeg?rlkey=gu7zqzkeuenwc1cck7xmddv7c&st=26vn68ql&dl=0,https://www.dropbox.com/scl/fi/tpeh3urourwiac5ijz2rv/WhatsApp-Image-2025-03-31-at-11.37.00.jpeg?rlkey=5o2igqc0ghfdjh3mjs6kgbbjm&st=tmnc3rjv&dl=0",
+    "categoria": "Toures",
+    "order": "null"
    }
   ],
   "categoria":[
@@ -299,19 +311,19 @@
   "enjoyCartagena":[
    {
     "id": 1,
-    "idProduct": 11
+    "idProduct": 26
    },
    {
     "id": 2,
-    "idProduct": 12
+    "idProduct": 27
    },
    {
     "id": 3,
-    "idProduct": 13
+    "idProduct": 10
    },
    {
     "id": 4,
-    "idProduct": 15
+    "idProduct": 11
    },
    {
     "id": 5,
@@ -364,7 +376,7 @@
    },
    {
     "id": 3,
-    "url": "http:\/\/www.wa.me\/573005121339",
+    "url": "https://wa.me/573005121339?text=Hola,%20quiero%20más%20información",
     "name": "whatsapp",
     "image": "\/redes\/3.png"
    },

@@ -75,7 +75,7 @@ const SingleProductContent = () => {
   const formatDescription = (text) => {
     if (!text) return "";
     return capitalizeSentences(text).split(". ").map((sentence, index) => (
-      <p key={index} className="text-gray-600 dark:text-gray-400 mt-2">{sentence}.</p>
+      <p key={index} className="text-gray-600 text-md font-bold dark:text-gray-400 mt-2">{sentence}.</p>
     ));
   };
 
@@ -94,7 +94,7 @@ const SingleProductContent = () => {
         <p className="text-gray-500 dark:text-gray-400 mt-2">Cargando...</p>
       ) : product ? (
         <div className="mt-4 p-4 border rounded-lg shadow-md bg-white dark:bg-gray-900 dark:border-gray-700">
-          <h2 className="text-xl font-semibold text-gray-900 dark:text-white">{product.nombre}</h2>
+          <h2 className="text-xl font-semibold text-gray-900 dark:text-white capitalize">{product.nombre}</h2>
 
           <div className="flex flex-col md:flex-col lg:flex-row gap-6 mt-4">
             <div className="w-full lg:w-1/2 flex flex-col items-center">
@@ -108,7 +108,7 @@ const SingleProductContent = () => {
                   unoptimized
                 />
               ) : (
-                <div className="w-full h-60 bg-gray-200 dark:bg-gray-700 flex items-center justify-center rounded-lg">
+                <div className="w-full h-60 bg-gray-200 dark:bg-gray-700 flex items-center justify-center rounded-lg ">
                   <p className="text-gray-500 dark:text-gray-400">Imagen no disponible</p>
                 </div>
               )}

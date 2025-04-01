@@ -1,20 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/navbar/navbar";
-import Head from "next/head";
 import { LanguageProvider } from "./components/context/LanguageContext";
 import LanguageSwitcher from "./components/context/LanguageSwitcher";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Barretto Transfer",
@@ -26,18 +14,23 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="es">
-      <Head>
-        <link rel="icon" href="/icon.png" />
+      <head>
+        <link rel="icon" href="/icons.png" />
         <link
           href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
           rel="stylesheet"
         />
-      </Head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet" />
+
+      </head>
+      <body className="antialiased">
         <LanguageProvider>
+          {/* Barra superior con el botón de cambio de idioma */}
+          <div className="w-full h-[15px] bg-white flex justify-end items-center px-4 py-1 z-50">
+            <LanguageSwitcher />
+          </div>
           <Navbar />
-          <LanguageSwitcher />
-          <div className="h-screen opacity-100 mb-5">{children}</div>
+          <main className="h-screen opacity-100 mb-5">{children}</main>
         </LanguageProvider>
       </body>
     </html>

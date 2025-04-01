@@ -1,5 +1,13 @@
-/* Importar la fuente Roboto desde Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poiret+One&display=swap');
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+}
+
+body, p, span, div {
+  font-family: 'Poiret One', sans-serif;
+}
+
 
 @tailwind base;
 @tailwind components;
@@ -20,7 +28,6 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: 'Roboto', sans-serif;
 }
 
 .bg-nv {

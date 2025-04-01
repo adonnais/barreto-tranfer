@@ -1,17 +1,25 @@
 "use client";
 
-import { useLanguage } from "../context/LanguageContext";
+import { useEffect, useState } from "react";
 
 export default function LanguageSwitcher() {
-  const { language, changeLanguage } = useLanguage();
+  
+
+  const handleTranslate = (lang: string) => {
+    const select = document.querySelector(".goog-te-combo") as HTMLSelectElement;
+    if (select) {
+      select.value = lang;
+      select.dispatchEvent(new Event("change"));
+    }
+  };
 
   return (
-    <div className="fixed bottom-10 right-10 z-50">
+    <div className={`w-full h-[5px] flex justify-end items-center px-4 py-2`}>
       <button
-        className="p-4 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-800 transition-all focus:outline-none focus:ring-4 focus:ring-blue-300"
-        onClick={() => changeLanguage(language === "en" ? "es" : "en")}
+        className="px-4 py-2 text-white rounded shadow-lg hover:bg-blue-800 transition-all"
+        onClick={() => handleTranslate("en")}
       >
-        {language === "en" ? "🇪🇸 ES" : "🇺🇸 EN"}
+        🇺🇸 EN
       </button>
     </div>
   );

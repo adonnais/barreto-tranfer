@@ -35,14 +35,14 @@ const GalleryTours = ({ cards }) => {
               unoptimized
             />
             <div className="p-4 text-center">
-              <h2 className="text-lg font-bold text-black dark:text-white">
+              <h2 className="text-lg font-bold text-black dark:text-white capitalize">
                 {card.nombre || "Sin nombre"}
               </h2>
               <p className="text-gray-600 dark:text-gray-400 text-sm text-start lowercase">
                 {truncateText(card.descripcion, 30) || "Sin descripción"}
               </p>
               <Link href={`/singleProduct?idProducto=${card.id}`} >
-                <button className="mt-2 px-4 py-2 bg-blue-500 text-white text-sm rounded-lg hover:bg-blue-600 dark:hover:bg-blue-400 transition">
+                <button className="mt-2 px-4 py-2 bg-blue-500 text-white text-md rounded-lg hover:bg-blue-600 dark:hover:bg-blue-400 transition">
                   Ver más
                 </button>
               </Link>

@@ -43,14 +43,14 @@ const Enjoy = ({ items }) => {
         <div className="mx-auto justify-items-start w-full">
           <GalleryEnjoy cards={productsInEnjoy} />
         </div>
-      </div>
+      </div> 
 
       {/* Sección: Viaja con Barreto Transfer */}
       <div className="relative flex flex-col justify-center items-center my-5 p-10 space-y-5 rounded-lg shadow-xl overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-blue-700 to-blue-900 dark:from-gray-800 dark:via-gray-900 dark:to-black animate-gradient"></div>
 
         <div className="relative z-10 text-center space-y-5">
-        <h1 className="text-white text-3xl font-bold  ">
+        <h1 className="text-white text-3xl font-bold ">
           Descubre la comodidad y seguridad de viajar con{" "}
           <span className="text-yellow-300 z-10 sogoe-font uppercase">Barretto Transfer</span>.  
           Disfruta de nuestros vehículos para tus excursiones y recorridos, dentro y fuera de la ciudad.  

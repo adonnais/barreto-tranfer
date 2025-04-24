@@ -5,10 +5,11 @@ import { useEffect, useState, useMemo, Suspense } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-const truncateText = (text, length) => (text.length > length ? text.substring(0, length) + "..." : text);
+const truncateText = (text, length) =>
+  text.length > length ? text.substring(0, length) + "..." : text;
 
 const transformDropboxLink = (url) => {
-  if (!url || typeof url !== "string") return "/placeholder.jpg"; // Imagen de respaldo
+  if (!url || typeof url !== "string") return "/placeholder.jpg";
   return url.replace("www.dropbox.com", "dl.dropboxusercontent.com");
 };
 
@@ -19,9 +20,13 @@ const ResultadosContent = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [isDarkMode, setIsDarkMode] = useState(false);
-  const [imageLoading, setImageLoading] = useState({}); // Estado para cada imagen
+  const [imageLoading, setImageLoading] = useState({});
+  const [idioma, setIdioma] = useState("ES");
 
   useEffect(() => {
+    const lang = localStorage.getItem("language") || "ES";
+    setIdioma(lang);
+
     if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
       setIsDarkMode(true);
     }
@@ -45,9 +50,15 @@ const ResultadosContent = () => {
   }, []);
 
   const filteredProductos = useMemo(() => {
-    return productos.filter(
-      (p) => p.nombre.toLowerCase().includes(query) || p.descripcion.toLowerCase().includes(query)
-    );
+    return productos.filter((p) => {
+      const fieldsToSearch = [
+        p.nombre_ES?.toLowerCase(),
+        p.nombre_EN?.toLowerCase(),
+        p.descripcion_ES?.toLowerCase(),
+        p.descripcion_EN?.toLowerCase(),
+      ];
+      return fieldsToSearch.some((field) => field?.includes(query));
+    });
   }, [productos, query]);
 
   if (loading) return <p className="text-gray-600 mt-4">Cargando productos...</p>;
@@ -64,6 +75,9 @@ const ResultadosContent = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-6">
           {filteredProductos.map((card) => {
             const imageUrl = transformDropboxLink(card.fotoPerfil);
+            const nombreProducto = card[`nombre_${idioma}`] || card.nombre || "Producto";
+            const descripcionProducto =
+              card[`descripcion_${idioma}`] || card.descripcion || "Sin descripción";
 
             return (
               <div
@@ -81,7 +95,7 @@ const ResultadosContent = () => {
 
                   <Image
                     src={imageUrl}
-                    alt={card.nombre}
+                    alt={`Imagen de ${nombreProducto}`}
                     width={300}
                     height={200}
                     className="w-full h-48 object-cover rounded-t-lg"
@@ -93,13 +107,13 @@ const ResultadosContent = () => {
                 </div>
 
                 <div className="p-4 text-center">
-                  <h2 className="text-lg font-bold uppercase">{card.nombre}</h2>
+                  <h2 className="text-lg font-bold uppercase">{nombreProducto}</h2>
                   <p className="text-gray-600 dark:text-gray-300 text-sm text-start lowercase">
-                    {truncateText(card.descripcion, 30)}
+                    {truncateText(descripcionProducto, 30)}
                   </p>
                   <Link href={`/singleProduct?idProducto=${card.id}`}>
                     <button className="mt-2 px-4 py-2 bg-blue-500 text-white text-sm rounded-lg hover:bg-blue-600 transition">
-                      Ver más
+                      {idioma === "ES" ? "Ver más" : "See more"}
                     </button>
                   </Link>
                 </div>

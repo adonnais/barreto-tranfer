@@ -4,12 +4,38 @@ import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 
+// Diccionario de traducciones
+const textos = {
+  ES: {
+    verMas: "Ver más",
+    cajaProductos: "Caja de productos",
+    mostrandoCategoria: "Mostrando productos de la categoría:",
+    sinProductos: "No hay productos disponibles.",
+    cargando: "Cargando productos...",
+  },
+  EN: {
+    verMas: "See more",
+    cajaProductos: "Product Box",
+    mostrandoCategoria: "Showing products from category:",
+    sinProductos: "No products available.",
+    cargando: "Loading products...",
+  },
+};
+
 const BoxProductContent = () => {
   const searchParams = useSearchParams();
   const category = searchParams.get("category") || "All";
 
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [idioma, setIdioma] = useState("ES");
+
+  const t = textos[idioma] || textos.ES;
+
+  useEffect(() => {
+    const lang = localStorage.getItem("language") || "ES";
+    setIdioma(lang.toUpperCase());
+  }, []);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -19,14 +45,12 @@ const BoxProductContent = () => {
         if (!response.ok) throw new Error("Error al cargar el archivo JSON");
 
         const jsonData = await response.json();
-        console.log("Datos a buscar:", jsonData.productos, "Categoría:", category);
 
         const filteredProducts =
           category === "All"
             ? jsonData.productos
             : jsonData.productos.filter((p) => p.categoria === category);
 
-        // Ordenar por 'order' antes de actualizar el estado
         const sortedProducts = filteredProducts.sort((a, b) => a.order - b.order);
 
         setProducts(sortedProducts);
@@ -47,15 +71,15 @@ const BoxProductContent = () => {
   };
 
   const transformDropboxLink = (url) => {
-    if (!url || typeof url !== "string") return "/placeholder.jpg"; 
+    if (!url || typeof url !== "string") return "/placeholder.jpg";
     return url.replace("www.dropbox.com", "dl.dropboxusercontent.com");
   };
 
   return (
     <div className="lg:pt-[10%] pt-[15%] px-6">
-      <h1 className="text-2xl font-bold text-center text-gray-900 dark:text-white">Caja de productos</h1>
+      <h1 className="text-2xl font-bold text-center text-gray-900 dark:text-white">{t.cajaProductos}</h1>
       <p className="text-lg text-gray-900 dark:text-gray-300 mt-2 text-center">
-        Mostrando productos de la categoría:{" "}
+        {t.mostrandoCategoria}{" "}
         <span className="font-semibold text-gray-900 dark:text-white">{category}</span>
       </p>
 
@@ -65,27 +89,29 @@ const BoxProductContent = () => {
         </div>
       ) : products.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-6">
-          {products.map((card) => (
+          {products.map((card, index) => (
             <div
-              key={card.id}
-              className="bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300"
+              key={index}
+              className="min-w-[280px] bg-white dark:bg-gray-900 shadow-lg rounded-lg overflow-hidden"
             >
-              <Image 
-                src={transformDropboxLink(card.fotoPerfil)} 
-                alt={card.nombre} 
-                width={300} 
-                height={200} 
-                className="w-full h-48 object-cover rounded-t-lg"
+              <Image
+                src={transformDropboxLink(card.fotoPerfil)}
+                alt={card[`nombre_${idioma}`] || "Imagen del producto"}
+                width={300}
+                height={200}
+                className="w-full h-48 object-cover"
                 unoptimized
               />
               <div className="p-4 text-center">
-                <h2 className="text-lg font-bold text-gray-700 dark:text-white uppercase">{card.nombre}</h2>
-                <p className="text-gray-600 dark:text-gray-300 text-sm text-start lowercase">
-                  {truncateText(card.descripcion, 30)}
+                <h2 className="text-lg font-bold text-black dark:text-white capitalize">
+                  {card[`nombre_${idioma}`] || "Sin nombre"}
+                </h2>
+                <p className="text-gray-600 dark:text-gray-400 text-sm text-start lowercase">
+                  {truncateText(card[`descripcion_${idioma}`], 30) || "Sin descripción"}
                 </p>
-                <Link href={`/singleProduct?idProducto=${card.id}`}>
-                  <button className="mt-2 px-4 py-2 bg-blue-500 text-white text-sm rounded-lg hover:bg-blue-600 transition">
-                    Ver más
+                <Link href={`/singleProduct?idProducto=${card.id}`} passHref>
+                  <button className="mt-2 px-4 py-2 bg-blue-500 text-white text-md rounded-lg hover:bg-blue-600 dark:hover:bg-blue-400 transition">
+                    {t.verMas}
                   </button>
                 </Link>
               </div>
@@ -93,7 +119,7 @@ const BoxProductContent = () => {
           ))}
         </div>
       ) : (
-        <p className="text-red-500 text-center mt-4">No hay productos disponibles.</p>
+        <p className="text-red-500 text-center mt-4">{t.sinProductos}</p>
       )}
     </div>
   );
@@ -101,7 +127,7 @@ const BoxProductContent = () => {
 
 const BoxProduct = () => {
   return (
-    <Suspense fallback={<p className="text-gray-600 dark:text-gray-300 mt-4">Cargando productos...</p>}>
+    <Suspense fallback={<p className="text-gray-600 dark:text-gray-300 mt-4">{textos.ES.cargando}</p>}>
       <BoxProductContent />
     </Suspense>
   );

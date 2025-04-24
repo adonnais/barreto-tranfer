@@ -1,45 +1,33 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Roboto } from "next/font/google";
+import { Poiret_One } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/navbar/navbar";
-import Head from "next/head";
-import { LanguageProvider } from "./components/context/LanguageContext";
-import LanguageSwitcher from "./components/context/LanguageSwitcher";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+// Configurar las fuentes
+const roboto = Roboto({ weight: ["400", "700"], subsets: ["latin"], variable: "--font-roboto" });
+const poiretOne = Poiret_One({ weight: "400", subsets: ["latin"], variable: "--font-poiret-one" });
 
 export const metadata: Metadata = {
   title: "Barretto Transfer",
   description: "Tours y Transporte",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{ children: React.ReactNode }>) {
+const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
-    <html lang="es">
-      <Head>
-        <link rel="icon" href="/icon.png" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <LanguageProvider>
-          <Navbar />
-          <LanguageSwitcher />
-          <div className="h-screen opacity-100 mb-5">{children}</div>
-        </LanguageProvider>
+    <html lang="es" className={`${roboto.variable} ${poiretOne.variable}`}>
+      <head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="/icons.png" />
+      </head>
+      <body className="antialiased">
+         <Navbar />
+          <main className="h-screen opacity-100 mb-5">{children}</main>
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;

@@ -1,17 +1,45 @@
 "use client";
 
-import { useLanguage } from "../context/LanguageContext";
+import { useEffect, useState } from "react";
 
 export default function LanguageSwitcher() {
-  const { language, changeLanguage } = useLanguage();
+  const [language, setLanguage] = useState<"ES" | "EN">("ES"); // Español por defecto en mayúsculas
+
+  useEffect(() => {
+    const storedLanguage = localStorage.getItem("language") as "ES" | "EN" | null;
+    if (storedLanguage) {
+      setLanguage(storedLanguage);
+      const select = document.querySelector(".goog-te-combo") as HTMLSelectElement;
+      if (select) {
+        select.value = storedLanguage.toLowerCase();
+        select.dispatchEvent(new Event("change"));
+      }
+    }
+  }, [])
+    console.log("leguaje",language);
+  const handleTranslate = () => {
+    const newLanguage: "ES" | "EN" = language === "ES" ? "EN" : "ES";
+    setLanguage(newLanguage);
+    localStorage.setItem("language", newLanguage);
+
+    console.log("Idioma seleccionado:", newLanguage);
+
+    const select = document.querySelector(".goog-te-combo") as HTMLSelectElement;
+    if (select) {
+      select.value = newLanguage.toLowerCase(); // Google Translate usa "en"/"es"
+      select.dispatchEvent(new Event("change"));
+    }
+
+    window.location.reload();
+  };
 
   return (
-    <div className="fixed bottom-10 right-10 z-50">
+    <div>
       <button
-        className="p-4 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-800 transition-all focus:outline-none focus:ring-4 focus:ring-blue-300"
-        onClick={() => changeLanguage(language === "en" ? "es" : "en")}
+        className="px-4 py-2 font-bold font-roboto text-white rounded-md shadow-md"
+        onClick={handleTranslate}
       >
-        {language === "en" ? "🇪🇸 ES" : "🇺🇸 EN"}
+        {language === "ES" ? "🇺🇸 ENGLISH" : "🇪🇸 ESPAÑOL"}
       </button>
     </div>
   );

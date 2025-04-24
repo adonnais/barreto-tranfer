@@ -2,19 +2,35 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
+// Constante con los textos en varios idiomas
+const textos = {
+  es: {
+    titulo: "Síguenos en Redes Sociales",
+  },
+  en: {
+    titulo: "Follow Us on Social Media",
+  },
+};
+
 const Feedback = () => {
   const [socialLinks, setSocialLinks] = useState([]);
   const [theme, setTheme] = useState("light");
+  const [idioma, setIdioma] = useState("es");
 
   useEffect(() => {
-    // Detectar el tema del navegador
+    // Detectar idioma desde localStorage
+    const lang = localStorage.getItem("language") || "ES";
+    setIdioma(lang.toLowerCase());
+  }, []);
+
+  useEffect(() => {
     const darkModeQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
     const updateTheme = () => {
       setTheme(darkModeQuery.matches ? "dark" : "light");
     };
 
-    updateTheme(); // Aplicar el tema en la carga
+    updateTheme();
     darkModeQuery.addEventListener("change", updateTheme);
 
     return () => {
@@ -36,13 +52,14 @@ const Feedback = () => {
       }
     };
     fetchData();
-  }, []); 
+  }, []);
 
   return (
     <div className={`w-full max-w-4xl mx-auto my-6 p-4 ${theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-black"}`}>
       <h2 className={`text-lg font-bold uppercase mb-4 text-center ${theme === "dark" ? "text-cyan-300" : "text-cyan-800"}`}>
-        Síguenos en Redes Sociales
+        {textos[idioma]?.titulo || textos.es.titulo}
       </h2>
+
       <div className="flex flex-wrap justify-center gap-4">
         {socialLinks.map((social) => (
           <a

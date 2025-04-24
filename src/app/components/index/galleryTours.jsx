@@ -1,10 +1,13 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Image from "next/image";
-import Link from "next/link"; // ✅ Corrección de la importación
+import Link from "next/link";
 
 // Función para transformar enlaces de Dropbox
 const transformDropboxLink = (url) => {
   if (!url || typeof url !== "string" || url.trim() === "") {
-    return "/placeholder.jpg"; // Imagen de respaldo en caso de URL inválida
+    return "/placeholder.jpg";
   }
   return url.replace("www.dropbox.com", "dl.dropboxusercontent.com");
 };
@@ -16,7 +19,30 @@ const truncateText = (text, wordLimit = 30) => {
   return words.length > wordLimit ? words.slice(0, wordLimit).join(" ") + "..." : text;
 };
 
-const GalleryTours = ({ cards }) => {
+// Traducciones
+const textos = {
+  ES: {
+    verMas: "Ver más",
+  },
+  EN: {
+    verMas: "See more",
+  },
+};
+
+const GalleryTours = ({ cards = [] }) => {
+  const [idioma, setIdioma] = useState("ES");
+  const [isReady, setIsReady] = useState(false);
+
+  useEffect(() => {
+    const lang = localStorage.getItem("language") || "ES";
+    setIdioma(lang.toUpperCase());
+    setIsReady(true);
+  }, []);
+
+  if (!isReady) return null;
+
+  const t = textos[idioma] || textos.ES;
+
   return (
     <div className="w-full px-4">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-4">
@@ -25,10 +51,9 @@ const GalleryTours = ({ cards }) => {
             key={index} 
             className="bg-white dark:bg-gray-900 shadow-lg rounded-lg overflow-hidden"
           >
-            {/* Imagen con transformación de Dropbox */}
             <Image 
               src={transformDropboxLink(card.fotoPerfil)} 
-              alt={card.nombre || "Imagen del producto"} 
+              alt={card[`nombre_${idioma}`] || "Imagen del producto"} 
               width={300}
               height={200}
               className="w-full h-48 object-cover rounded-t-lg"
@@ -36,14 +61,14 @@ const GalleryTours = ({ cards }) => {
             />
             <div className="p-4 text-center">
               <h2 className="text-lg font-bold text-black dark:text-white capitalize">
-                {card.nombre || "Sin nombre"}
+                {card[`nombre_${idioma}`] || "Sin nombre"}
               </h2>
               <p className="text-gray-600 dark:text-gray-400 text-sm text-start lowercase">
-                {truncateText(card.descripcion, 30) || "Sin descripción"}
+                {truncateText(card[`descripcion_${idioma}`], 30) || "Sin descripción"}
               </p>
-              <Link href={`/singleProduct?idProducto=${card.id}`} >
+              <Link href={`/singleProduct?idProducto=${card.id}`}>
                 <button className="mt-2 px-4 py-2 bg-blue-500 text-white text-md rounded-lg hover:bg-blue-600 dark:hover:bg-blue-400 transition">
-                  Ver más
+                  {t.verMas}
                 </button>
               </Link>
             </div>

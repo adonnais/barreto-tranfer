@@ -41,6 +41,12 @@ const SingleProductContent = () => {
   const [loading, setLoading] = useState(true);
   const [mainImage, setMainImage] = useState("");
   const [galleryImages, setGalleryImages] = useState([]);
+  const [idioma, setIdioma] = useState("ES");
+
+  useEffect(() => {
+    const lang = localStorage.getItem("language") || "ES";
+    setIdioma(lang);
+  }, []);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -57,8 +63,6 @@ const SingleProductContent = () => {
         setMainImage(transformDropboxLink(foundProduct.fotoPerfil));
 
         if (foundProduct.todasFotos) {
-         // console.log("Cargando imágenes desde la cadena:", foundProduct.todasFotos);
-
           const imagesArray = foundProduct.todasFotos
             .split(",")
             .map((url) => transformDropboxLink(url.trim()));
@@ -81,7 +85,8 @@ const SingleProductContent = () => {
 
   const handleWhatsApp = () => {
     if (!product) return;
-    const message = encodeURIComponent(`Hola, estoy interesado en el producto: ${product.nombre}`);
+    const nombre = product[`nombre_${idioma}`] || product.nombre || "producto";
+    const message = encodeURIComponent(`Hola, estoy interesado en el producto: ${nombre}`);
     const phoneNumber = "+573005121339";
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, "_blank");
   };
@@ -94,7 +99,9 @@ const SingleProductContent = () => {
         <p className="text-gray-500 dark:text-gray-400 mt-2">Cargando...</p>
       ) : product ? (
         <div className="mt-4 p-4 border rounded-lg shadow-md bg-white dark:bg-gray-900 dark:border-gray-700">
-          <h2 className="text-xl font-semibold text-gray-900 dark:text-white capitalize">{product.nombre}</h2>
+          <h2 className="text-xl font-semibold text-gray-900 dark:text-white capitalize">
+            {product[`nombre_${idioma}`] || product.nombre || "Sin nombre"}
+          </h2>
 
           <div className="flex flex-col md:flex-col lg:flex-row gap-6 mt-4">
             <div className="w-full lg:w-1/2 flex flex-col items-center">
@@ -103,7 +110,7 @@ const SingleProductContent = () => {
                   src={mainImage}
                   width={600}
                   height={600}
-                  alt={product.nombre}
+                  alt={product[`nombre_${idioma}`] || product.nombre || "Imagen del producto"}
                   className="rounded-lg shadow-lg object-cover"
                   unoptimized
                 />
@@ -127,7 +134,7 @@ const SingleProductContent = () => {
                             src={foto}
                             width={150}
                             height={150}
-                            alt={`Vista ${index + 1}`}
+                            alt={`Vista del producto ${product[`nombre_${idioma}`] || product.nombre || ""} - imagen ${index + 1}`}
                             className="rounded-md object-cover w-[100px] h-[100px] flex-none"
                             unoptimized
                           />
@@ -141,7 +148,7 @@ const SingleProductContent = () => {
               </div>
             </div>
             <div className="w-full lg:w-1/2">
-              {formatDescription(product.descripcion)}
+              {formatDescription(product[`descripcion_${idioma}`] || product.descripcion)}
               <button
                 onClick={handleWhatsApp}
                 className="mt-6 px-6 py-3 bg-green-500 text-white text-lg font-semibold rounded-full flex items-center gap-3 shadow-lg hover:bg-green-600 dark:hover:bg-green-400 transition-all duration-300 transform hover:scale-105"

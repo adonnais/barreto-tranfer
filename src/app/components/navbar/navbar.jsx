@@ -5,16 +5,23 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import LanguageSwitcher from "../context/LanguageSwitcher";
 
 const Navbar = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [query, setQuery] = useState("");
   const [menuItems, setMenuItems] = useState([]);
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [idioma, setIdioma] = useState("ES");
   const router = useRouter();
 
   useEffect(() => {
     setIsDarkMode(window.matchMedia("(prefers-color-scheme: dark)").matches);
+  }, []);
+
+  useEffect(() => {
+    const lang = localStorage.getItem("language") || "ES";
+    setIdioma(lang);
   }, []);
 
   const toggleModal = () => setIsModalOpen(!isModalOpen);
@@ -43,14 +50,16 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Navbar principal */}
       <nav className={`fixed top-0 left-0 w-full shadow-md z-30 ${isDarkMode ? "bg-gray-900 text-white" : "bg-white text-black"}`}>
         <div className="flex items-center justify-between px-4 py-3 lg:px-8">
           <Link href="/">
             <Image src="/logo.png" height={900} width={900} alt="Logo" className="lg:h-[80px] md:h-14 h-6 w-auto" />
           </Link>
 
-          {/* Barra de búsqueda en escritorio */}
+          <div>
+            <LanguageSwitcher />
+          </div>
+
           <form onSubmit={handleSearch} className="hidden lg:block w-1/3">
             <div className="relative">
               <input
@@ -62,35 +71,32 @@ const Navbar = () => {
                   isDarkMode ? "bg-gray-800 text-white border-gray-600" : "border-gray-300"
                 }`}
               />
-              <button type="submit" className="absolute inset-y-0 right-3 flex items-center text-gray-500 hover:text-blue-600">
+              <button type="submit" className="absolute inset-y-0 right-3 flex items-center text-gray-500">
                 🔍
               </button>
             </div>
           </form>
 
-          {/* Menú móvil */}
-          <div className="lg:hidden cursor-pointer" onClick={toggleModal}>
+          <div className="lg:hidden cursor-pointer text-xl" onClick={toggleModal}>
             ☰
           </div>
         </div>
 
-        {/* Barra de categorías debajo del Navbar (visible en escritorio) */}
         <div className="hidden lg:flex justify-center bg-blue-600 dark:bg-gray-800 py-2 shadow-sm z-40">
           <div className="flex space-x-4">
             {menuItems.map((item) => (
               <Link
                 key={item.id}
-                href={`/boxProduct?category=${encodeURIComponent(item.categoria)}`}
-                className="text-white dark:text-gray-300 hover:text-yellow-400  transition-transform hover:scale-105 hover:uppercase hover:font-bold"
+                href={`/boxProduct?category=${encodeURIComponent(item.nombre_ES)}`}
+                className="text-white dark:text-gray-300 text-lg"
               >
-                {item.categoria}
+                {item[`nombre_${idioma}`] || item.nombre_ES}
               </Link>
             ))}
           </div>
         </div>
       </nav>
 
-      {/* Modal de menú móvil */}
       <AnimatePresence>
         {isModalOpen && (
           <motion.div
@@ -101,7 +107,6 @@ const Navbar = () => {
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
           >
             <div className={`w-full p-5 rounded-t-lg relative z-10 ${isDarkMode ? "bg-gray-900 text-white" : "bg-white text-black"}`}>
-              {/* Barra de búsqueda en modal */}
               <form onSubmit={handleSearch} className="w-full pt-10">
                 <div className="relative">
                   <input
@@ -113,7 +118,7 @@ const Navbar = () => {
                       isDarkMode ? "bg-gray-800 text-white border-gray-600" : "border-gray-300"
                     }`}
                   />
-                  <button type="submit" className="absolute inset-y-0 right-3 flex items-center text-gray-500 hover:text-blue-600">
+                  <button type="submit" className="absolute inset-y-0 right-3 flex items-center text-gray-500">
                     🔍
                   </button>
                 </div>
@@ -121,23 +126,25 @@ const Navbar = () => {
 
               <div className="h-[1px] my-2 bg-black"></div>
 
-              {/* Lista de categorías en el modal */}
               <div className="flex flex-col space-y-2">
                 {menuItems.map((item) => (
                   <Link
                     key={item.id}
-                    href={`/boxProduct?category=${encodeURIComponent(item.categoria)}`}
-                    className="text-md font-light "
-                    aria-label={`Ir a ${item.categoria}`}
+                    href={`/boxProduct?category=${encodeURIComponent(item.nombre_ES)}`}
+                    className="text-md font-light"
+                    aria-label={`Ir a ${item[`nombre_${idioma}`]}`}
                     onClick={() => setIsModalOpen(false)}
                   >
-                    {item.categoria}
+                    {item[`nombre_${idioma}`] || item.nombre_ES}
                   </Link>
                 ))}
               </div>
 
-              {/* Botón de cerrar */}
-              <button className="absolute top-3 right-3 p-2 rounded" onClick={toggleModal}>
+              <div className="mt-4">
+                <LanguageSwitcher />
+              </div>
+
+              <button className="absolute top-3 right-3 p-2 rounded text-lg" onClick={toggleModal}>
                 ✖
               </button>
             </div>

@@ -3,7 +3,7 @@ import dynamic from 'next/dynamic';
 import { useState, useEffect } from 'react';
 
 // Carga dinámica con un componente de Loading
-const Cover = dynamic(() => import('./cover'), { loading: () => <p>Cargando Cover...</p> });
+const Cover = dynamic(() => import('./cover'), { loading: () => <p className='w-full h-screem'>Cargando Cover...</p> });
 const Enjoy = dynamic(() => import('./enjoy'), { loading: () => <p>Cargando Enjoy...</p> });
 const Video = dynamic(() => import('./video'), { loading: () => <p>Cargando Video...</p> });
 const Feedback = dynamic(() => import('./feedback'), { loading: () => <p>Cargando Feedback...</p> });
@@ -40,7 +40,7 @@ export default function Index() {
   }
 
   return (
-    <div className="space-y-5 lg:pt-[16px] pt-[14px]">
+    <div className="space-y-5">
       <Cover items={items} />
       <Footer />
       <Enjoy items={items} />

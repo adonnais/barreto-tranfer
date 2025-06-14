@@ -13,7 +13,7 @@ const textos = {
     viajesTexto:
       "Disfruta de nuestros vehículos para tus excursiones y recorridos, dentro y fuera de la ciudad. ¡Viaja con confianza, confort y el mejor servicio! 🚐✨",
     boton: "Solo da click aquí",
-    favoritos: "Tours Favoritos",
+    favoritos: "Recomendados",
   },
   en: {
     queHacer: "What to do in Cartagena?",
@@ -21,7 +21,7 @@ const textos = {
     viajesTexto:
       "Enjoy our vehicles for your excursions and tours, in and out of the city. Travel with confidence, comfort, and the best service! 🚐✨",
     boton: "Just click here",
-    favoritos: "Favorite Tours",
+    favoritos: "Recommended",
   },
 };
 

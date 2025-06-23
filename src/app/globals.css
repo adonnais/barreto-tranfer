@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poiret+One&display=swap');
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+}
+
+body, p, span, div {
+  font-family: 'Poiret One', sans-serif;
+}
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,9 +28,64 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
 }
 
-.bg-nv{
+.bg-nv {
   background-color: rgba(255, 255, 255, 0.5);
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradientMove 5s ease infinite;
+}
+
+@media (max-width: 768px) {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@font-face {
+  font-family: 'Segoe Script';
+  src: url('/segoesc.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.sogoe-font {
+  font-family: "Segoe Script", sans-serif;
+}
+
+/* Estilo general de la barra */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* Fondo de la barra */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+/* Color y forma de la barra */
+::-webkit-scrollbar-thumb {
+  background: #3498db;
+  border-radius: 10px;
+  transition: background 0.3s ease-in-out;
+}
+
+/* Efecto al pasar el cursor */
+::-webkit-scrollbar-thumb:hover {
+  background: #2980b9;
 }

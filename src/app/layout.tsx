@@ -1,40 +1,33 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Roboto } from "next/font/google";
+import { Poiret_One } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/navbar/navbar"
-import Footer from "./components/footer/footer"
+import Navbar from "./components/navbar/navbar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+// Configurar las fuentes
+const roboto = Roboto({ weight: ["400", "700"], subsets: ["latin"], variable: "--font-roboto" });
+const poiretOne = Poiret_One({ weight: "400", subsets: ["latin"], variable: "--font-poiret-one" });
 
 export const metadata: Metadata = {
-  title: "Barreto Transfer",
-  description: "Tures y TRansporte",
+  title: "Barretto Transfer",
+  description: "Tours y Transporte",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
-    <html lang="en">
-    <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased` }
-      >
-        <Navbar />
-        <div className=" h-screem opacacity-1 mb-5 overflow-y-auto">
-        {children}
-        </div>
-        <Footer />
+    <html lang="es" className={`${roboto.variable} ${poiretOne.variable}`}>
+      <head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="/icons.png" />
+      </head>
+      <body className="antialiased">
+         <Navbar />
+          <main className="h-screen opacity-100 mb-5 py-10">{children}</main>
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;

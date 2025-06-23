@@ -24,7 +24,7 @@ const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
       </head>
       <body className="antialiased">
          <Navbar />
-          <main className="h-screen opacity-100 mb-5">{children}</main>
+          <main className="h-screen opacity-100 mb-5 py-10">{children}</main>
       </body>
     </html>
   );

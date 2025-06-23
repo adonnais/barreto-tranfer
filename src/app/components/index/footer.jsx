@@ -5,12 +5,12 @@ import Image from "next/image";
 // Textos por idioma
 const textos = {
   es: {
-    titulo: "Quiénes Somos",
+    titulo: "¿Quiénes Somos?",
     descripcion:
       "Somos una empresa que facilita tus necesidades en tus vacaciones en Cartagena. Brindándote la mejor experiencia, confort y confianza en cada paso que das con nosotros..",
   },
   en: {
-    titulo: "About Us",
+  titulo: "About Us?",
     descripcion:
       "We are a company that makes your vacation needs in Cartagena easier. Providing you with the best experience, comfort, and trust in every step you take with us.",
   },

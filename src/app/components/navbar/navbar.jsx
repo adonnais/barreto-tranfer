@@ -52,9 +52,16 @@ const Navbar = () => {
     <>
       <nav className={`fixed top-0 left-0 w-full shadow-md z-30 ${isDarkMode ? "bg-gray-900 text-white" : "bg-white text-black"}`}>
         <div className="flex items-center justify-between px-4 py-3 lg:px-8">
-          <Link href="/">
-            <Image src="/logo.png" height={900} width={900} alt="Logo" className="lg:h-[80px] md:h-14 h-6 w-auto" />
-          </Link>
+        <Link href="/">
+          <Image
+            src={isDarkMode ? "/logo-dk.png" : "/logo-lg.png"}
+            height={900}
+            width={900}
+            alt="Logo"
+            className="lg:h-[80px] md:h-14 h-6 w-auto"
+          />
+        </Link>
+
 
           <div>
             <LanguageSwitcher />

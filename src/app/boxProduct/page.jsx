@@ -8,14 +8,14 @@ import Link from "next/link";
 const textos = {
   ES: {
     verMas: "Ver más",
-    cajaProductos: "Caja de productos",
+
     mostrandoCategoria: "Mostrando productos de la categoría:",
     sinProductos: "No hay productos disponibles.",
     cargando: "Cargando productos...",
   },
   EN: {
     verMas: "See more",
-    cajaProductos: "Product Box",
+
     mostrandoCategoria: "Showing products from category:",
     sinProductos: "No products available.",
     cargando: "Loading products...",
@@ -76,7 +76,7 @@ const BoxProductContent = () => {
   };
 
   return (
-    <div className="lg:pt-[10%] pt-[15%] px-6">
+    <div className=" pt-[7%] px-6 pb-7">
       <h1 className="text-2xl font-bold text-center text-gray-900 dark:text-white">{t.cajaProductos}</h1>
       <p className="text-lg text-gray-900 dark:text-gray-300 mt-2 text-center">
         {t.mostrandoCategoria}{" "}
